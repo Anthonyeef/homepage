@@ -2874,6 +2874,13 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
+css-in-js-utils@^3.0.0:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/css-in-js-utils/-/css-in-js-utils-3.0.4.tgz#9173c31b1fcb31401f0baf84fb3b680971b49eab"
+  integrity sha512-4RKm4RXq+TnX3rVRl85cabEc+VtR0yuU8zT9QpZqa9lLlJzw7Ma6Yyg2N9Gm6l9W+TP0IsWF0wvh3Is4Oifr7g==
+  dependencies:
+    hyphenate-style-name "^1.0.3"
+
 css-loader@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-1.0.1.tgz#6885bb5233b35ec47b006057da01cc640b6b79fe"
@@ -3028,6 +3035,11 @@ csstype@^2.2.0:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.9.tgz#05141d0cd557a56b8891394c1911c40c8a98d098"
   integrity sha512-xz39Sb4+OaTsULgUERcCk+TJj8ylkL4aSVDQiX/ksxbELSqwkgt4d4RD7fovIdgJGSuNYqwZEiVjYY5l0ask+Q==
+
+csstype@^2.5.5:
+  version "2.6.10"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.10.tgz#e63af50e66d7c266edb6b32909cfd0aabe03928b"
+  integrity sha512-D34BqZU4cIlMCY93rZHbrq9pjTAQJ3U8S8rfBqjwHxkGPThWFjzZDQpgMJY0QViLxth6ZKYiwFBo14RdN44U/w==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -4069,6 +4081,11 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
+fast-loops@^1.0.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/fast-loops/-/fast-loops-1.1.2.tgz#2ee75ba943a08a9b1ffdf9b49f133322c99bda68"
+  integrity sha512-ql8BgnHFryLogmmzR5O3uobe+3Zzaq6h6MWn/VtAyL9OXb51r5PSTbCm9f56fvEvMWWGjbdkr4xyhT0/vLJkKw==
+
 fastparse@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
@@ -4094,6 +4111,25 @@ faye-websocket@~0.11.0, faye-websocket@~0.11.1:
   integrity sha512-D2y4bovYpzziGgbHYtGCMjlJM36vAl/y+xUyn1C+FVx8szd1E+86KwVw6XvYSzOP8iMpm1X0I4xJD+QtUb36OA==
   dependencies:
     websocket-driver ">=0.5.1"
+
+fela-utils@^11.2.0:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/fela-utils/-/fela-utils-11.2.0.tgz#d1947275a8070e99db3e8d7bc6a75d2963df498a"
+  integrity sha512-fYSw5AYjh2m+Lj0y1WRTx4aBscngRhRDkHdoEtG0tZH5Re1q8+VeHIrM7MRCrzHB8BtIoLkXURDGPe3vSZPTYA==
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    fast-loops "^1.0.0"
+
+fela@^11.2.0:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/fela/-/fela-11.2.0.tgz#19c7d94dbb44423cb44ae8899c6a3aff49af7037"
+  integrity sha512-xhiRS9wIuZorsY9hOaTInGl2zXJF2CaUda7NerwMFzE6hyXkNwTSX0ZfITKUyKq9015AtXFnjKTe2hXtJeXI1Q==
+  dependencies:
+    css-in-js-utils "^3.0.0"
+    csstype "^2.5.5"
+    fast-loops "^1.0.0"
+    fela-utils "^11.2.0"
+    isobject "^3.0.1"
 
 figgy-pudding@^3.5.1:
   version "3.5.1"
@@ -5208,6 +5244,11 @@ human-signals@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
+
+hyphenate-style-name@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
+  integrity sha512-EcuixamT82oplpoJ2XU4pDtKGWQ7b00CD9f1ug9IaQ3p1bkHMiKCZ9ut9QDI6qsa6cpUuB+A/I+zLtdNK4n2DQ==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.17, iconv-lite@^0.4.24:
   version "0.4.24"
