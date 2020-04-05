@@ -31,6 +31,8 @@ export default props => {
       <p
         css={css`
           text-align: right;
+          font-size: ${rhythm(0.6)};
+          color: #888888;
         `}
       >
         {props.date}

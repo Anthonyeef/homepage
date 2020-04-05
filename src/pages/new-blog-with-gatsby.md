@@ -78,4 +78,9 @@ export default ({ data }) => {
 
 参考了 Gatsby 的这个[文档]()
 
+#### Telegram instant view
+
+我是 Telegram 的重度使用者。当然也会希望能让自己的主页可以实现 Telegram 的 instant view。
+WIP
+
 > \*more content still WIP

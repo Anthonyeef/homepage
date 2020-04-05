@@ -21,6 +21,15 @@ export default ({ data }) => {
         {post.frontmatter.title}
       </h2>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <p
+        css={css`
+          text-align: right;
+          font-size: ${rhythm(0.6)};
+          color: #888888;
+        `}
+      >
+        {post.frontmatter.date}
+      </p>
       <Footer />
     </Container>
   )
@@ -32,6 +41,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "DD MMMM, YYYY")
       }
     }
   }
