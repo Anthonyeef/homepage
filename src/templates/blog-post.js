@@ -13,6 +13,9 @@ export default ({ data }) => {
         css={css`
           margin-bottom: ${rhythm(2)};
           margin-left: -2em;
+          @media (max-width: 700px) {
+            margin-left: 0em;
+          }
         `}
       >
         {post.frontmatter.title}

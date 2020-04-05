@@ -1,6 +1,16 @@
 import React from "react"
-import containerStyles from "./container.module.css"
+import { css } from "@emotion/core"
 
 export default ({ children }) => (
-  <div className={containerStyles.container}>{children}</div>
+  <div
+    css={css`
+      margin: 3rem auto;
+      max-width: 700px;
+      @media (max-width: 700px) {
+        width: 80%;
+      }
+    `}
+  >
+    {children}
+  </div>
 )
