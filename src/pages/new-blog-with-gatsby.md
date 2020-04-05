@@ -66,7 +66,9 @@ export default ({ data }) => {
 
 #### 移动端适配(响应式)
 
-wip
+不熟悉前端怎么实现响应式，搜索了一下，关键字是 mediaquery 确定下来几个尺寸的 breakpoint，再根据不同的尺寸写对应的 CSS。也有主打响应式的 CSS 框架，比如 [Bulma](https://bulma.io/)。
+
+我思考了一下，觉得自己目前并不需要为了这件事专门引入一个 CSS 的模块。再搜了一下 emotion 的文档，简单地在我的容器 container 里头写了尺寸小于 700px 时，宽度为 80%。后面再看情况调整其他的地方吧。
 
 #### Tag 索引
 
