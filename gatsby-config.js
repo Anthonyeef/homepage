@@ -23,6 +23,34 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: "Dark (Visual Studio)",
+              wrapperClassName: "",
+              getLineClassName: ({ content, index, language, meta }) => "",
+              logLevel: "warn",
+            },
+          },
+        ],
+      },
+      // options: {
+      //   plugins: [
+      //     {
+      //       resolve: `gatsby-remark-prismjs`,
+      //       options: {
+      //         classPrefix: "language-",
+      //         inlineCodeMarker: null,
+      //         showLineNumbers: false,
+      //         noInlineHighlight: false,
+      //       },
+      //     },
+      //   ],
+      // },
+    },
   ],
 }

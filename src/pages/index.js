@@ -1,38 +1,20 @@
 import React from "react"
 import Container from "../components/container"
-import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
+import Post from "../components/post"
+import { graphql } from "gatsby"
+import Header from "../components/header"
 
 export default ({ data }) => (
   <Container>
-    <h1
-      css={css`
-        display: inline-block;
-        border-bottom: 1px solid;
-      `}
-    >
-      {data.site.siteMetadata.title}
-    </h1>
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+    <Header />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
-        <Link
+        <Post
           to={node.fields.slug}
-          css={css`
-            text-decoration: none;
-            color: inherit;
-          `}
-        >
-          <h3
-            css={css`
-              margin-bottom: ${rhythm(1 / 4)};
-            `}
-          >
-            {node.frontmatter.title}
-          </h3>
-        </Link>
-        <p>{node.frontmatter.excerpt}</p>
+          title={node.frontmatter.title}
+          excerpt={node.frontmatter.excerpt}
+          date={node.frontmatter.date}
+        />
       </div>
     ))}
   </Container>

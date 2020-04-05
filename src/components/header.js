@@ -1,3 +1,14 @@
 import React from "react"
+import { css } from "@emotion/core"
 
-export default() => <h1>This is Header</h1>
+export default () => {
+  return (
+    <div
+      css={css`
+        text-align: center;
+      `}
+    >
+      Yifen
+    </div>
+  )
+}
