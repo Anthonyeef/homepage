@@ -70,6 +70,10 @@ export default ({ data }) => {
 
 我思考了一下，觉得自己目前并不需要为了这件事专门引入一个 CSS 的模块。再搜了一下 emotion 的文档，简单地在我的容器 container 里头写了尺寸小于 700px 时，宽度为 80%。后面再看情况调整其他的地方吧。
 
+#### Google Analytics
+
+搜索了一下有做好的 Gatsby plugin。直接加上了。另外搜到了有人做的 Google Analytics 的 Telegram bot，所以也在 Telegram 上添加了一下这个 bot 的授权。
+
 #### Tag 索引
 
 参考了 Gatsby 的这个[文档]()
