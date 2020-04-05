@@ -9,11 +9,20 @@ module.exports = {
     title: "Yifen's notes",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/pages`,
       },
     },
     {
@@ -38,19 +47,6 @@ module.exports = {
           },
         ],
       },
-      // options: {
-      //   plugins: [
-      //     {
-      //       resolve: `gatsby-remark-prismjs`,
-      //       options: {
-      //         classPrefix: "language-",
-      //         inlineCodeMarker: null,
-      //         showLineNumbers: false,
-      //         noInlineHighlight: false,
-      //       },
-      //     },
-      //   ],
-      // },
     },
   ],
 }

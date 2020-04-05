@@ -1,14 +1,30 @@
 import React from "react"
 import { css } from "@emotion/core"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
 export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "avatar.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
-    <div
+    <Img
       css={css`
-        text-align: center;
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 3rem auto;
+        border-radius: 50%;
       `}
-    >
-      Yifen
-    </div>
+      fluid={data.file.childImageSharp.fluid}
+    />
   )
 }

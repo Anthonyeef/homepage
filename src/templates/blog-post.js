@@ -9,13 +9,14 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Container>
-      <h1
+      <h2
         css={css`
           margin-bottom: ${rhythm(2)};
+          margin-left: -2em;
         `}
       >
         {post.frontmatter.title}
-      </h1>
+      </h2>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <Footer />
     </Container>
