@@ -12,15 +12,16 @@ export default ({ data }) => {
       <h2
         css={css`
           margin-bottom: ${rhythm(2)};
-          margin-left: -2em;
-          @media (max-width: 700px) {
-            margin-left: 0em;
-          }
         `}
       >
         {post.frontmatter.title}
       </h2>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        css={css`
+          padding-left: 1rem;
+        `}
+      />
       <p
         css={css`
           text-align: right;
