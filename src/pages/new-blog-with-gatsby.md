@@ -74,13 +74,20 @@ export default ({ data }) => {
 
 搜索了一下有做好的 Gatsby plugin。直接加上了。另外搜到了有人做的 Google Analytics 的 Telegram bot，所以也在 Telegram 上添加了一下这个 bot 的授权。
 
-#### Tag 索引
+#### Telegram Instant View
 
-参考了 Gatsby 的这个[文档]()
+要让自己的 link 在 Telegram 里头实现 Instant View，需要在 Telegram 里提交适配了自己页面的 template，告诉 Telegram 应该如何处理我的链接。
+我提交了自己的模板。内容比较少，只要能拿到 body 和 title 告诉 Telegram 即可；但没办法立刻能生效，需要提交至少 10 个 link 可以应用这个模板的才行。
 
-#### Telegram instant view
+后面继续搬运旧 blog 过来，再逐步添加吧。
 
-我是 Telegram 的重度使用者。当然也会希望能让自己的主页可以实现 Telegram 的 instant view。
-WIP
+---
+
+Todo:
+
+- 苹方字体
+- Tag 索引
+- 旧 Markdown 文件图片迁移
+- 加一个 blog.yifen.me 的二级域名
 
 > \*more content still WIP
