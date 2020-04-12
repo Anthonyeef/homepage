@@ -35,6 +35,25 @@ excerpt: "最近一段时间都在学 React。作为作业，用 Gatsby 搭建�
 
 要实现代码高亮很简单，搜了一下一般都是通过插件来做的。Gatsby 的插件市场里搜索 `code hight` 就可以找到非常多的插件。我挑了[这个](https://www.gatsbyjs.org/packages/gatsby-remark-vscode/?=highlight)，高亮的样式跟 VS Code 是一样的。
 
+#### 区分开 inline code
+
+上面这一步可以让 Markdown 中 block 样式的代码块有高亮的效果。但在文本中的 `inline code` 的效果不是很好，我想自己写 CSS 装饰一下。看了一下渲染之后的 dom 内容，发现其实都是 `<code>` 标签包裹起来的内容。
+如果直接对 `<code>` 进行装饰，可能就会同时影响到 inline 和 code block 的样式了。
+
+再观察了一下，发现 block 样式的 `<code>` 还有一个 class 是 `grvsc-code`。
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gdqwuibnabj32540rgdpl.jpg)
+
+所以只要保证 `选中 grvsc-code 之外的其他 code 标签` 就可以了。css 里的选择器可以这么写：
+
+```css
+code:not(.grvsc-code) {
+  padding: 0.2em 0.4em;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+}
+```
+
 #### 分页
 
 参考了 Gatsby 的这个[文档](https://www.gatsbyjs.org/docs/adding-pagination/)，做了一些小改动。文档里主要有两件事：
@@ -80,6 +99,10 @@ export default ({ data }) => {
 我提交了自己的模板。内容比较少，只要能拿到 body 和 title 告诉 Telegram 即可；但没办法立刻能生效，需要提交至少 10 个 link 可以应用这个模板的才行。
 
 后面继续搬运旧 blog 过来，再逐步添加吧。
+
+#### RSS
+
+已经支持了。装了 `gatsby-plugin-feed` 这个插件，再在 config 里配置了一下就好了。地址在[这里](https://yifen.me/rss.xml)。
 
 ---
 
