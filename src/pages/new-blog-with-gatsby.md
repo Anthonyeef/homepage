@@ -104,11 +104,23 @@ export default ({ data }) => {
 
 已经支持了。装了 `gatsby-plugin-feed` 这个插件，再在 config 里配置了一下就好了。地址在[这里](https://yifen.me/rss.xml)。
 
+#### 苹方字体
+
+在全局的 `global.css` 里加上了这个字体设置：
+
+```css
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+```
+
+感谢朋友胡椒君~ 另外发现 VS Code 会补全这个 font-family，真方便。
+
 ---
 
 Todo:
 
-- 苹方字体
 - Tag 索引
 - 旧 Markdown 文件图片迁移
 - 加一个 blog.yifen.me 的二级域名
