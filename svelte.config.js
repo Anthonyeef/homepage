@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-static'
-import sveltePreprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex } from 'mdsvex'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -7,18 +7,19 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
-			default: true
+			handleHttpError: 'warn',
+			entries: ['*']
 		},
 	},
 
 	extensions: ['.svelte', '.md'],
 
 	preprocess: [
-		sveltePreprocess(),
+		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
 			layout: {
-				blog: 'src/routes/blog/_post.svelte'
+				blog: 'src/routes/blog/+layout.svelte'
 			}
 		})
 	]
