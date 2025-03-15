@@ -11,16 +11,19 @@ export const load = async ({ fetch }) => {
             slug,
             title: post.metadata.title,
             date: post.metadata.date,
-            excerpt: post.metadata.excerpt
+            excerpt: post.metadata.excerpt,
+            draft: post.metadata.draft || false
         };
     });
 
     const allPosts = await Promise.all(postPromises);
+
+    const publishedPosts = allPosts.filter(post => !post.draft);
     
     // Sort posts by date (newest first)
-    allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    publishedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     return {
-        posts: allPosts
+        posts: publishedPosts
     };
 };
