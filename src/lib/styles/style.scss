@@ -37,10 +37,95 @@ body {
 }
 
 main {
+    // Better typography for blog content
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+
+    // Link styling with pink accent
+    a {
+        color: #333;
+        text-decoration: none;
+        border-bottom: 3px solid rgba(236, 72, 153, 0.3);
+        font-weight: bold;
+        
+        &:hover {
+            color: #ec4899;
+        }
+        
+        &:visited {
+            color: #333;
+        }
+    }
+
+    // Paragraph spacing
+    p {
+        margin-bottom: 1.2em;
+        line-height: 1.7;
+    }
+
+    // Headings
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+        margin-top: 2em;
+        margin-bottom: 0.8em;
+        color: #222;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.25em; }
+    h4 { font-size: 1.1em; }
+
+    // Lists
+    ul, ol {
+        line-height: 1.6;
+        margin-bottom: 1.2em;
+        
+        li {
+            margin-bottom: 0.4em;
+        }
+    }
+
+    // Blockquotes
+    blockquote {
+        line-height: 1.6;
+        margin: 1.5em 0;
+        padding-left: 1em;
+        border-left: 4px solid #ddd;
+        color: #666;
+    }
+
     img {
         max-width: 100%;
         height: auto;
         display: block;
         margin: 2rem auto;
+    }
+
+    // Code blocks
+    pre {
+        background-color: #f6f8fa;
+        border-radius: 6px;
+        padding: 16px;
+        overflow: auto;
+        font-size: 14px;
+        line-height: 1.45;
+        margin: 1.5rem 0;
+        
+        code {
+            background: none;
+            padding: 0;
+            border-radius: 0;
+        }
+    }
+
+    // Inline code
+    code {
+        background-color: rgba(175, 184, 193, 0.2);
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
     }
 }

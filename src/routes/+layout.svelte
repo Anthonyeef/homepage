@@ -1,8 +1,12 @@
 <script>
     import '$lib/styles/style.scss'
+    import { page } from '$app/stores'
+    
+    $: isBlogs = $page.route?.id?.includes('/blog/[slug]')
 </script>
 
 <div class="container">
+    {#if !isBlogs}
     <header class="header">
         <nav>
             <ul class="nav-links">
@@ -18,6 +22,7 @@
             </ul>
         </nav>
     </header>
+    {/if}
 
     <main>
         <slot />

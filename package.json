@@ -12,20 +12,24 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.22.2",
+		"@playwright/test": "^1.54.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/kit": "^2.25.2",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"eslint": "^8.16.0",
-		"eslint-config-prettier": "^8.3.0",
+		"eslint-config-prettier": "^8.10.2",
 		"eslint-plugin-svelte": "^2.35.1",
-		"mdsvex": "^0.11.0",
-		"prettier": "^2.6.2",
-		"prettier-plugin-svelte": "^2.7.0",
-		"sass": "^1.62.1",
-		"svelte": "^4.0.0",
+		"mdsvex": "^0.12.6",
+		"prettier": "^2.8.8",
+		"prettier-plugin-svelte": "^2.10.1",
+		"sass": "^1.89.2",
+		"svelte": "^4.2.20",
 		"svelte-preprocess": "^5.0.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"prismjs": "^1.30.0",
+		"shiki": "^3.8.1"
+	}
 }

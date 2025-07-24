@@ -36,8 +36,12 @@
         a {
             color: #000;
             text-decoration: none;
+            border-bottom: none;
+            font-weight: inherit;
+            transition: color 0.2s ease;
             
             &:hover {
+                color: #e879a6;
                 text-decoration: none;
             }
         }
