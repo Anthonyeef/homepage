@@ -1,0 +1,163 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/about",
+			"dest": "/about/"
+		},
+		{
+			"src": "/about/",
+			"status": 308,
+			"headers": {
+				"Location": "/about"
+			}
+		},
+		{
+			"src": "/blog",
+			"dest": "/blog/"
+		},
+		{
+			"src": "/blog/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog"
+			}
+		},
+		{
+			"src": "/contact",
+			"dest": "/contact/"
+		},
+		{
+			"src": "/contact/",
+			"status": 308,
+			"headers": {
+				"Location": "/contact"
+			}
+		},
+		{
+			"src": "/blog/universal-control-on-m1-mac",
+			"dest": "/blog/universal-control-on-m1-mac/"
+		},
+		{
+			"src": "/blog/universal-control-on-m1-mac/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/universal-control-on-m1-mac"
+			}
+		},
+		{
+			"src": "/blog/experience-the-ocean-like-a-pirate",
+			"dest": "/blog/experience-the-ocean-like-a-pirate/"
+		},
+		{
+			"src": "/blog/experience-the-ocean-like-a-pirate/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/experience-the-ocean-like-a-pirate"
+			}
+		},
+		{
+			"src": "/blog/no-filter-instagram",
+			"dest": "/blog/no-filter-instagram/"
+		},
+		{
+			"src": "/blog/no-filter-instagram/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/no-filter-instagram"
+			}
+		},
+		{
+			"src": "/blog/2020-05-04",
+			"dest": "/blog/2020-05-04/"
+		},
+		{
+			"src": "/blog/2020-05-04/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/2020-05-04"
+			}
+		},
+		{
+			"src": "/blog/new-blog-with-gatsby",
+			"dest": "/blog/new-blog-with-gatsby/"
+		},
+		{
+			"src": "/blog/new-blog-with-gatsby/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/new-blog-with-gatsby"
+			}
+		},
+		{
+			"src": "/blog/2020-03",
+			"dest": "/blog/2020-03/"
+		},
+		{
+			"src": "/blog/2020-03/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/2020-03"
+			}
+		},
+		{
+			"src": "/blog/thought-about-remote-working",
+			"dest": "/blog/thought-about-remote-working/"
+		},
+		{
+			"src": "/blog/thought-about-remote-working/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/thought-about-remote-working"
+			}
+		},
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "/.*",
+			"dest": "/![-]/catchall"
+		}
+	],
+	"overrides": {
+		"index.html": {
+			"path": ""
+		},
+		"about.html": {
+			"path": "about"
+		},
+		"blog.html": {
+			"path": "blog"
+		},
+		"contact.html": {
+			"path": "contact"
+		},
+		"blog/universal-control-on-m1-mac.html": {
+			"path": "blog/universal-control-on-m1-mac"
+		},
+		"blog/experience-the-ocean-like-a-pirate.html": {
+			"path": "blog/experience-the-ocean-like-a-pirate"
+		},
+		"blog/no-filter-instagram.html": {
+			"path": "blog/no-filter-instagram"
+		},
+		"blog/2020-05-04.html": {
+			"path": "blog/2020-05-04"
+		},
+		"blog/new-blog-with-gatsby.html": {
+			"path": "blog/new-blog-with-gatsby"
+		},
+		"blog/2020-03.html": {
+			"path": "blog/2020-03"
+		},
+		"blog/thought-about-remote-working.html": {
+			"path": "blog/thought-about-remote-working"
+		}
+	}
+}
