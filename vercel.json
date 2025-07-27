@@ -16,5 +16,16 @@
                         "source": "/my-weight/:path*",
                         "destination": "https://svelte-weight-tracker.vercel.app/:path*"
                 }
+        ],
+        "headers": [
+                {
+                        "source": "/my-weight/_app/:path*",
+                        "headers": [
+                                {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                }
+                        ]
+                }
         ]
 } 
