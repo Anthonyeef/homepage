@@ -1,1 +1,0 @@
-import{S as e,i as a,s as r}from"./BJ9OYGg-.js";import"./IHki7fMi.js";const s={title:"工作五周年的感想",date:"2022-07-03",excerpt:"毕业五年啦",draft:!0,tags:["Lifelog","Work"]},{title:i,date:c,excerpt:d,draft:f,tags:p}=s;class u extends e{constructor(t){super(),a(this,t,null,null,r,{})}}export{u as default,s as metadata};

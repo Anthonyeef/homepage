@@ -7,16 +7,16 @@
 		
 		<link href="../_app/immutable/assets/0.C0b0Q4_Z.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/6.Da5qQr-a.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.Dx_66-EG.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DyOfQkMt.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.Tc77bm6n.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ZXTKKnjn.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/BJ9OYGg-.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.CsUbdHaS.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.B2CGpgGG.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/C1FmrZbK.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/IHki7fMi.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.BEGJ2rtR.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Q9ei193t.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.8HDRLHFJ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BH_2txyQ.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/2.C8wi0bOY.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/6.CUZM6EUs.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.D0ctayso.js">
 	</head>
 	<body>
 		<div>  <div class="container"> <main><article><h1>搭了一个新的个人网站</h1>  <p class="date svelte-1oyyb0n">Published: 2020-04-04</p> <p data-svelte-h="svelte-1lwxcri">最近一段时间都在学 React。作为作业，用 Gatsby 搭建了一个新的个人主页。打算陆续从 Typlog 上搬运过来旧的日记，还有实践一些简单的前端页面。</p> <h3 data-svelte-h="svelte-5jmh96">为什么不继续使用 Typlog 呢？</h3> <p data-svelte-h="svelte-zyh1wh">我觉得 Typlog 很好，后台功能也很完善。但我觉得 Typlog 渲染 Markdown 出来的样式不够好看。可能就是自己觉得不够好看吧。</p> <p data-svelte-h="svelte-1yspgm0">除此之外就是一些小细节了，例如：想在文章中间插入一张图片的时候，图片的宽度想等于文字的宽度，得选择某一个固定的模板才可以；文章的头图的宽度也不能设置成和段落等宽，被拉伸后的头图感觉很不好看。</p> <p data-svelte-h="svelte-47eh4y">还有一个原因是今年 Typlog 的几个小改动：</p> <ol data-svelte-h="svelte-408j7h"><li>老用户的套餐变更，不能随意增加自己的站点了；</li> <li>原本的 <code>.com</code> 域名变动，变成了 <code>.io</code> 域名。</li></ol> <p data-svelte-h="svelte-1lqvzbq">虽然小明也提前在 Telegram group 里做了预告，但我还是感觉到，自己的个人主页这样被不稳定因素影响，还是挺被动的。</p> <p data-svelte-h="svelte-1avtppe">我想自己做一个主页来 host 一些 Markdown 文件，把控制权掌握在自己手里。</p> <h3 data-svelte-h="svelte-sc2lcw">细节</h3> <p data-svelte-h="svelte-1mlpnip">要自己从零开始搭一个个人主页，感觉还有很多的细节需要考虑。Gatsby 不是类似 Hexo 那样的博客框架，虽然也有提供一些成熟的 blog starter，但如果打算 build from scratch、把它当成我自己的一个网站项目来做，还是有很多事情要做。比如现在我就在想，怎么做 paging；怎么做 tag 索引；怎么加上 GA……一些 Hexo 里头开箱即用的功能，得搜索一下再手动加上。</p> <p data-svelte-h="svelte-1qxu68z">但我觉得应该不会是太大的问题。最近经常有一种迷之自信，总感觉一般只要不是太难的问题，Google 一下都可以搜到答案。如果不自己动手做这个项目，反而失去了 <code>去了解自己未知的东西</code> 的机会。</p> <p data-svelte-h="svelte-vo17yu">下面记录自己遇到的问题，以及解决的方案：</p> <h4 data-svelte-h="svelte-l7sexi">客制化代码高亮</h4> <p data-svelte-h="svelte-1mi1sr8">我预感自己发布的内容里会出现不少的代码片段。Gatsby 提供了 <code>dangerouslySetInnerHTML</code> 的内容来放置 Markdown 转换出来的 html，但里面的一些内容没有经过样式调整，显得非常朴素。</p> <p data-svelte-h="svelte-12euwaa">要实现代码高亮很简单，搜了一下一般都是通过插件来做的。Gatsby 的插件市场里搜索 <code>code hight</code> 就可以找到非常多的插件。我挑了<a href="https://www.gatsbyjs.org/packages/gatsby-remark-vscode/?=highlight" rel="nofollow">这个</a>，高亮的样式跟 VS Code 是一样的。</p> <h4 data-svelte-h="svelte-1v3jds4">区分开 inline code</h4> <p data-svelte-h="svelte-1mo583v">上面这一步可以让 Markdown 中 block 样式的代码块有高亮的效果。但在文本中的 <code>inline code</code> 的效果不是很好，我想自己写 CSS 装饰一下。看了一下渲染之后的 dom 内容，发现其实都是 <code>&lt;code&gt;</code> 标签包裹起来的内容。
@@ -48,15 +48,15 @@
 			
 			<script>
 				{
-					__sveltekit_m5f0y9 = {
+					__sveltekit_ig6t = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.Dx_66-EG.js"),
-						import("../_app/immutable/entry/app.CsUbdHaS.js")
+						import("../_app/immutable/entry/start.Tc77bm6n.js"),
+						import("../_app/immutable/entry/app.B2CGpgGG.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 6],
