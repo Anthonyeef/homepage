@@ -1,1 +1,0 @@
-import{S as e,i as a,s as o}from"./BJ9OYGg-.js";import"./IHki7fMi.js";const s={title:"在 M1 Macbook Pro 上体验 Universal Control",date:"2021-06-11",excerpt:"久违的科技感体验",tags:""},{title:c,date:i,excerpt:m,tags:p}=s;class u extends e{constructor(t){super(),a(this,t,null,null,o,{})}}export{u as default,s as metadata};

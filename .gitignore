@@ -40,3 +40,4 @@ internal
 *.tgz
 .eslintcache
 .svelte-kit
+.vercel

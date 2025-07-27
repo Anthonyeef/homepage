@@ -35,17 +35,6 @@
 			}
 		},
 		{
-			"src": "/blog/universal-control-on-m1-mac",
-			"dest": "/blog/universal-control-on-m1-mac/"
-		},
-		{
-			"src": "/blog/universal-control-on-m1-mac/",
-			"status": 308,
-			"headers": {
-				"Location": "/blog/universal-control-on-m1-mac"
-			}
-		},
-		{
 			"src": "/blog/experience-the-ocean-like-a-pirate",
 			"dest": "/blog/experience-the-ocean-like-a-pirate/"
 		},
@@ -137,9 +126,6 @@
 		},
 		"contact.html": {
 			"path": "contact"
-		},
-		"blog/universal-control-on-m1-mac.html": {
-			"path": "blog/universal-control-on-m1-mac"
 		},
 		"blog/experience-the-ocean-like-a-pirate.html": {
 			"path": "blog/experience-the-ocean-like-a-pirate"
