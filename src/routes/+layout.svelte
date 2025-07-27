@@ -11,10 +11,7 @@
         <nav>
             <ul class="nav-links">
                 <li class="nav-link-item">
-                    <a class="nav-link-text" href="/">Home</a>
-                </li>
-                <li class="nav-link-item">
-                    <a class="nav-link-text" href="/about">About</a>
+                    <a class="nav-link-text" href="/">Yifen</a>
                 </li>
                 <li class="nav-link-item">
                     <a class="nav-link-text" href="/blog">Blog</a>
