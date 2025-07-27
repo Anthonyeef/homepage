@@ -4,6 +4,9 @@
 
 <article>
     <h1>{ data.title }</h1>
+    {#if data.draft}
+        <div class="draft-badge">DRAFT</div>
+    {/if}
     <p class="date">Published: {data.date}</p>
     <svelte:component this={data.content} />
     
@@ -13,6 +16,18 @@
 </article>
 
 <style>
+    .draft-badge {
+        display: inline-block;
+        background-color: #fbbf24;
+        color: #92400e;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.375rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
     .date {
         text-align: right;
         color: #666;

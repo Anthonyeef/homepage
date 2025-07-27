@@ -7,6 +7,9 @@
         <article class="post-preview">
             <h2 class="post-title">
                 <a href="/blog/{post.slug}">{post.title}</a>
+                {#if post.draft}
+                    <span class="draft-badge">DRAFT</span>
+                {/if}
             </h2>
             {#if post.excerpt}
                 <p class="post-excerpt">{post.excerpt}</p>
@@ -32,6 +35,9 @@
         font-size: 1.5rem;
         line-height: 1.3;
         font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
         
         a {
             color: #000;
@@ -45,6 +51,18 @@
                 text-decoration: none;
             }
         }
+    }
+
+    .draft-badge {
+        display: inline-block;
+        background-color: #fbbf24;
+        color: #92400e;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.375rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        flex-shrink: 0;
     }
 
     .post-meta {

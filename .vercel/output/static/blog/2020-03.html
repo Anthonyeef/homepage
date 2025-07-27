@@ -6,32 +6,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 		<link href="../_app/immutable/assets/0.C0b0Q4_Z.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/6.D5FUALDT.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.BeE9Y6Jz.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/4y7kvlAQ.js">
+		<link href="../_app/immutable/assets/6.Da5qQr-a.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.Dx_66-EG.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DyOfQkMt.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/BJ9OYGg-.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.q-EIQa6V.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.CsUbdHaS.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/C1FmrZbK.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/IHki7fMi.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.DKgW_nJa.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DMpgEp6l.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.BEGJ2rtR.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Q9ei193t.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/2.C8wi0bOY.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/6.BwTVrSoA.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.CUZM6EUs.js">
 	</head>
 	<body>
-		<div>  <div class="container"> <main><article><h1>2020-03</h1> <p class="date svelte-18o05wn">Published: 2020-04-01</p> <h2 data-svelte-h="svelte-io1z9a">💻</h2> <ul data-svelte-h="svelte-lycm8y"><li>用 Python 写了一个企业微信的机器人。作用是每周团队里需求冻结的那天下午，抓取一遍 Gitlab 里需要当天合入的 merge request，然后发到企业微信群里提醒一下大家记得合并。</li> <li>上面的这个脚本出了一点小问题，因为很难准确地从 Gitlab 的信息里知道<strong>这周发的是什么版本</strong>这个信息。尝试了一些途径都碰壁，最后决定自己来维护发版的信息，用 flask-restful 写了一个内网可以访问的小接口。数据源放在了 Google Sheet 上面，再用一个 2013 年的代码片段<a href="http://blog.pamelafox.org/2013/06/exporting-google-spreadsheet-as-json.html" rel="nofollow">^1</a>把 Google Sheet 上的数据转成 json。</li></ul> <p data-svelte-h="svelte-1djmyue"><img src="https://i.typlog.com/yifen/8414078262_960514.png" alt="image.png"></p> <ul data-svelte-h="svelte-18i7t94"><li>这个服务本来部署在了办公室里的一台小机器上；后来跟同事介绍了一下，同事也很感兴趣，让我部署在了内部的一台服务器上，他有个手上的任务也可以接入我的接口。看来还是有人有类似的需求的。</li> <li>接到了新的任务，要开始用新的工具写新的东西。分配给我的任务到今天基本打通了，明天有时间研究一下怎么写 RFC 给其他同事看我的思路。</li> <li>昨天写了一个脚本，把本来各端约定好的颜色和色组文件做了一下解析，变成了新项目里可以直接进行使用的格式。颜色在原来的仓库里是 yaml 文件存放的，随便 Google 了一个 online yaml to json converter 转成了 json，再用 python 的脚本读取后拼接成了 Dart 字符串，写入到文件中。过程非常简单，但避免了手动处理几百个颜色，还挺好的。写了一个相关的 wiki 以及新增了两个仓库，打算后面让相关的同事配上 CI，每次有新增的颜色的时候就自动执行这个过程，来更新仓库里的色组。</li></ul> <h2 data-svelte-h="svelte-9fkrst">📚</h2> <ul data-svelte-h="svelte-14gyelr"><li>过了一遍 React 文档里的教程</li> <li>过了一遍 Gatsby 文档里的教程</li> <li>买了 wesbos 的 React for beginner 的课，看到了第 20 章；</li> <li>感觉现在自己大概理解了 React 里的一些基本概念了：component、state 和 props。但感觉 React 的 router 有点繁琐；Gatsby 的文档好详细，对我这样的小白很友好</li> <li>过了一遍 Flutter 的文档</li></ul> <h2 data-svelte-h="svelte-1iovqpn">🍳</h2> <ul data-svelte-h="svelte-g5ydye"><li>买了一份盐焗鸡，从广东寄过来了；明天打算拆一下，鸡肉蒸热，鸡架煲汤</li></ul> <div class="back-nav svelte-18o05wn" data-svelte-h="svelte-1fgbd2g"><a href="/blog" class="back-link svelte-18o05wn">← Back to posts</a></div> </article></main></div> 
+		<div>  <div class="container"> <main><article><h1>2020-03</h1>  <p class="date svelte-1oyyb0n">Published: 2020-04-01</p> <h2 data-svelte-h="svelte-io1z9a">💻</h2> <ul data-svelte-h="svelte-lycm8y"><li>用 Python 写了一个企业微信的机器人。作用是每周团队里需求冻结的那天下午，抓取一遍 Gitlab 里需要当天合入的 merge request，然后发到企业微信群里提醒一下大家记得合并。</li> <li>上面的这个脚本出了一点小问题，因为很难准确地从 Gitlab 的信息里知道<strong>这周发的是什么版本</strong>这个信息。尝试了一些途径都碰壁，最后决定自己来维护发版的信息，用 flask-restful 写了一个内网可以访问的小接口。数据源放在了 Google Sheet 上面，再用一个 2013 年的代码片段<a href="http://blog.pamelafox.org/2013/06/exporting-google-spreadsheet-as-json.html" rel="nofollow">^1</a>把 Google Sheet 上的数据转成 json。</li></ul> <p data-svelte-h="svelte-1djmyue"><img src="https://i.typlog.com/yifen/8414078262_960514.png" alt="image.png"></p> <ul data-svelte-h="svelte-18i7t94"><li>这个服务本来部署在了办公室里的一台小机器上；后来跟同事介绍了一下，同事也很感兴趣，让我部署在了内部的一台服务器上，他有个手上的任务也可以接入我的接口。看来还是有人有类似的需求的。</li> <li>接到了新的任务，要开始用新的工具写新的东西。分配给我的任务到今天基本打通了，明天有时间研究一下怎么写 RFC 给其他同事看我的思路。</li> <li>昨天写了一个脚本，把本来各端约定好的颜色和色组文件做了一下解析，变成了新项目里可以直接进行使用的格式。颜色在原来的仓库里是 yaml 文件存放的，随便 Google 了一个 online yaml to json converter 转成了 json，再用 python 的脚本读取后拼接成了 Dart 字符串，写入到文件中。过程非常简单，但避免了手动处理几百个颜色，还挺好的。写了一个相关的 wiki 以及新增了两个仓库，打算后面让相关的同事配上 CI，每次有新增的颜色的时候就自动执行这个过程，来更新仓库里的色组。</li></ul> <h2 data-svelte-h="svelte-9fkrst">📚</h2> <ul data-svelte-h="svelte-14gyelr"><li>过了一遍 React 文档里的教程</li> <li>过了一遍 Gatsby 文档里的教程</li> <li>买了 wesbos 的 React for beginner 的课，看到了第 20 章；</li> <li>感觉现在自己大概理解了 React 里的一些基本概念了：component、state 和 props。但感觉 React 的 router 有点繁琐；Gatsby 的文档好详细，对我这样的小白很友好</li> <li>过了一遍 Flutter 的文档</li></ul> <h2 data-svelte-h="svelte-1iovqpn">🍳</h2> <ul data-svelte-h="svelte-g5ydye"><li>买了一份盐焗鸡，从广东寄过来了；明天打算拆一下，鸡肉蒸热，鸡架煲汤</li></ul> <div class="back-nav svelte-1oyyb0n" data-svelte-h="svelte-1fgbd2g"><a href="/blog" class="back-link svelte-1oyyb0n">← Back to posts</a></div> </article></main></div> 
 			
 			<script>
 				{
-					__sveltekit_hlff = {
+					__sveltekit_m5f0y9 = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.BeE9Y6Jz.js"),
-						import("../_app/immutable/entry/app.q-EIQa6V.js")
+						import("../_app/immutable/entry/start.Dx_66-EG.js"),
+						import("../_app/immutable/entry/app.CsUbdHaS.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 6],

@@ -18,7 +18,11 @@ export const load = async ({ fetch }) => {
 
     const allPosts = await Promise.all(postPromises);
 
-    const publishedPosts = allPosts.filter(post => !post.draft);
+    // Show drafts in development, hide in production
+    const isDev = import.meta.env.DEV;
+    const publishedPosts = isDev 
+        ? allPosts // Show all posts including drafts in development
+        : allPosts.filter(post => !post.draft); // Hide drafts in production
     
     // Sort posts by date (newest first)
     publishedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
