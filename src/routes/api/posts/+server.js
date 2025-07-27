@@ -14,7 +14,8 @@ export const GET = async () => {
             title: post.metadata.title,
             date: post.metadata.date,
             excerpt: post.metadata.excerpt,
-            draft: post.metadata.draft || false
+            draft: post.metadata.draft || false,
+            tags: post.metadata.tags || []
         };
     });
 
