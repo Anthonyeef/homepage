@@ -5,6 +5,14 @@
 	"installCommand": "npm install",
 	"rewrites": [
 		{
+			"source": "/my-weight/_app/:path*",
+			"destination": "https://svelte-weight-tracker.vercel.app/_app/:path*"
+		},
+		{
+			"source": "/my-weight",
+			"destination": "https://svelte-weight-tracker.vercel.app/"
+		},
+		{
 			"source": "/my-weight/:path*",
 			"destination": "https://svelte-weight-tracker.vercel.app/:path*"
 		}
