@@ -3,29 +3,11 @@
         "outputDirectory": "build",
         "framework": "sveltekit",
         "installCommand": "npm install",
-        "rewrites": [
-                {
-                        "source": "/my-weight/_app/:path*",
-                        "destination": "https://svelte-weight-tracker.vercel.app/_app/:path*"
-                },
+        "redirects": [
                 {
                         "source": "/my-weight",
-                        "destination": "https://svelte-weight-tracker.vercel.app/"
-                },
-                {
-                        "source": "/my-weight/:path*",
-                        "destination": "https://svelte-weight-tracker.vercel.app/:path*"
-                }
-        ],
-        "headers": [
-                {
-                        "source": "/my-weight/_app/:path*",
-                        "headers": [
-                                {
-                                        "key": "Access-Control-Allow-Origin",
-                                        "value": "*"
-                                }
-                        ]
+                        "destination": "https://svelte-weight-tracker.vercel.app/",
+                        "permanent": false
                 }
         ]
 } 
