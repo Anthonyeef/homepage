@@ -10,7 +10,7 @@
     {#if data.tags && data.tags.length > 0}
         <div class="post-tags">
             {#each data.tags as tag}
-                <a href="/blog/tags/{tag}" class="tag-link">{tag}</a>
+                <a href="/blog/tags/{tag}" class="tag-link">#{tag}</a>
             {/each}
         </div>
     {/if}
@@ -39,22 +39,21 @@
         margin: 1rem 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     .tag-link {
-        display: inline-block;
-        background-color: #f3f4f6;
-        color: #374151;
-        padding: 0.25rem 0.75rem;
-        border-radius: 1rem;
-        font-size: 0.875rem;
+        color: #666;
         text-decoration: none;
-        transition: all 0.2s;
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+        border-bottom: none !important;
+        font-weight: normal !important;
         
         &:hover {
-            background-color: #3b82f6;
-            color: white;
+            color: #333;
+            text-decoration: none;
+            border-bottom: none !important;
         }
     }
 
