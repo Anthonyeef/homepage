@@ -3,9 +3,10 @@ title: "搭了一个新的个人网站"
 date: "2020-04-04"
 excerpt: "最近一段时间都在学 React。作为作业，用 Gatsby 搭建了一个新的个人主页。打算陆续从 Typlog 上搬运过来旧的日记，还有实践一些简单的前端页面。"
 tags:
-  - "Frondend"
-  - "Gatsby"
-  - "Svelte"
+- "Technology"
+- "React"
+- "Gatsby"
+- "Blog"
 ---
 
 最近一段时间都在学 React。作为作业，用 Gatsby 搭建了一个新的个人主页。打算陆续从 Typlog 上搬运过来旧的日记，还有实践一些简单的前端页面。

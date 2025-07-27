@@ -1,6 +1,6 @@
 export async function load({ params }){
     const post = await import(`../${params.slug}.md`)
-    const { title, date, draft } = post.metadata
+    const { title, date, draft, tags } = post.metadata
     const content = post.default
 
     // Check if this is a draft and we're in production
@@ -14,6 +14,7 @@ export async function load({ params }){
         content,
         title,
         date,
-        draft: draft || false
+        draft: draft || false,
+        tags: tags || []
     }
 }

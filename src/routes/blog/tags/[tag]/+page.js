@@ -1,9 +1,9 @@
-export async function load() {
-    const posts = import.meta.glob('./*.md')
+export async function load({ params }) {
+    const posts = import.meta.glob('../../*.md')
 
     const postPromises = Object.entries(posts).map(async ([path, resolver]) => {
         const post = await resolver()
-        const slug = path.slice(2, -3) // Remove './' and '.md'
+        const slug = path.slice(6, -3) // Remove '../../' and '.md'
 
         return {
             slug,
@@ -23,10 +23,16 @@ export async function load() {
         ? allPosts // Show all posts including drafts in development
         : allPosts.filter(post => !post.draft); // Hide drafts in production
 
+    // Filter posts by the specified tag
+    const taggedPosts = publishedPosts.filter(post => 
+        post.tags && post.tags.includes(params.tag)
+    );
+
     // Sort posts by date (newest first)
-    publishedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    taggedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     return {
-        posts: publishedPosts
+        tag: params.tag,
+        posts: taggedPosts
     }
-}
+} 

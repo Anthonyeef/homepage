@@ -1,8 +1,11 @@
 ---
 title: "远程工作的一些感受"
 date: "2020-02-24"
-excerpt: ""
-tags: ""
+excerpt: "远程工作的一些感受"
+tags:
+- "Work"
+- "Remote"
+- "Lifestyle"
 ---
 
 TL,DR:
