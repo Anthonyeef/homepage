@@ -22,6 +22,7 @@
 - [ ] Add reading time estimates for posts
 - [ ] Create "Related Posts" suggestions
 - [ ] Add social media sharing buttons
+- [ ] Support pagination for blog list
 
 ### **User Experience**
 - [ ] Add dark mode toggle
