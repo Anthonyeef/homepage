@@ -3,11 +3,10 @@
         "outputDirectory": "build",
         "framework": "sveltekit",
         "installCommand": "npm install",
-        "redirects": [
+        "rewrites": [
                 {
-                        "source": "/my-weight",
-                        "destination": "https://svelte-weight-tracker.vercel.app/",
-                        "permanent": false
+                        "source": "/my-weight/:path*",
+                        "destination": "https://svelte-weight-tracker.vercel.app/:path*"
                 }
         ]
 } 
