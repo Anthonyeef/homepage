@@ -14,7 +14,7 @@ TL,DR:
 - 我远程工作的感觉非常好；偶尔在家健身也让自己觉得保持有活力。
 - 未来可能远程会成为一种正常的工作方式。
 
-![](https://raw.githubusercontent.com/Anthonyeef/homepage/main/static/images/remote-work-1.jpg)
+![](/images/remote-work-1.jpg)
 
 Long version:
 
@@ -28,7 +28,7 @@ Long version:
 
 我在两年前有过一年的远程工作经验。当时我必须要回学校准备自己最后一年的毕业，包括补一些重要的学分还有完成毕业设计。实习的公司希望我在回学校后还可以继续帮忙做一些需求，所以当时持续了一段时间的远程工作的状态。但这次二月份的在家办公给我的感觉还是有所不同的：在学校的时候配置简陋，就是抱着笔记本来来回回跑找安静的地方而已；在家里有自己宽阔的工作台。春节期间我下单了一个新的显示器，还调整了一下房间里的光线，从之前默认的冷白光调整成了更加适合夜里工作的淡黄色灯光环境。
 
-![公司的活动让大家拍出来在家办公的工作台；我拍了后没发给他们，就发这里吧](https://raw.githubusercontent.com/Anthonyeef/homepage/main/static/images/remote-work-2.jpg)
+![公司的活动让大家拍出来在家办公的工作台；我拍了后没发给他们，就发这里吧](/images/remote-work-2.jpg)
 
 单从工作环境来说的话，家里的工作台比公司工位更加舒服一些。当然这也是因为我可以按照自己的想法随意地调整家里的环境；公司就很容易受到限制了。
 
@@ -46,7 +46,7 @@ Long version:
 
 第一个让我觉得不舒服的地方是，自己如果不加以注意的话，工作的时间会变得很长。
 
-![](https://raw.githubusercontent.com/Anthonyeef/homepage/main/static/images/remote-work-3.jpg)
+![](/images/remote-work-3.jpg)
 
 就像上图：有一天早上我刚醒来就直接`弹`到工作台上工作了。那天的事情比较多，但通过延长自己工作时间的方式，还是在那天内做完了该做的事情。
 
