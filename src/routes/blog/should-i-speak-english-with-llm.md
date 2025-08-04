@@ -10,7 +10,7 @@ tags:
 - "Kimi"
 ---
 
-<img src="https://tvax1.sinaimg.cn/large/9fbe0bc0gy1i427ybw60tj20sg0sgnhl.jpg" alt="cat speaking her language to robot" width="400" />
+<img src="https://images.weserv.nl/?url=tvax1.sinaimg.cn/large/9fbe0bc0gy1i427ybw60tj20sg0sgnhl.jpg" alt="cat speaking her language to robot" width="400" />
 
 > 请问 LLM 的 token 是怎么计算的？假如我在使用 chatGPT 或者 Claude 的时候，我应该跟它说中文，还是说英文？我想知道人类输入的语言是否会影响 LLM 的理解，还有就是不同的语言是否会需要更多的消耗，带来更多的成本 
 
@@ -29,13 +29,13 @@ OpenAI 用 tiktoken，Claude 用自家 BPE，Gemini/Llama 用 SentencePiece。
 
 有一些线上的工具，可以输入一段文本内容，然后看到 tokenization 的结果。比如这个 [revechat](https://www.revechat.com/token-calculator/) 的 token calculator,
 
-<img src="https://tvax3.sinaimg.cn/large/9fbe0bc0gy1i426xidrrbj20pq0togpg.jpg" alt="revechat token calculator" width="500" />
+<img src="https://images.weserv.nl/?url=tvax3.sinaimg.cn/large/9fbe0bc0gy1i426xidrrbj20pq0togpg.jpg" alt="revechat token calculator" width="500" />
 
 可以看到 token 的数量其实跟字母的数量不一定是一一对应的关系。`How I met your mother` 里有 21 个英文字母，一共只消耗了 5 个 token. 
 
 中文的 `老爸老妈浪漫史`，7 个汉字最后换算出来是 7 个 token. 
 
-<img src="https://tvax4.sinaimg.cn/large/9fbe0bc0gy1i4270ys47wj20oe0tutcr.jpg" alt="revechat token calculator CN" width="500" />
+<img src="https://images.weserv.nl/?url=tvax4.sinaimg.cn/large/9fbe0bc0gy1i4270ys47wj20oe0tutcr.jpg" alt="revechat token calculator CN" width="500" />
 
 
 这里只是举例，没有说这里的中文和英文是十分贴合对应的意思，只是刚好脑子里想出来了这句话。
@@ -44,7 +44,7 @@ OpenAI 用 tiktoken，Claude 用自家 BPE，Gemini/Llama 用 SentencePiece。
 
 > This process of tokenization is not uniform across languages, leading to disparities in the number of tokens produced for equivalent expressions in different languages. For example, a sentence in Burmese or Amharic may require 10x more tokens than a similar message in English.
 
-![image](https://tvax3.sinaimg.cn/large/9fbe0bc0gy1i4278yn7imj20s60be0v9.jpg)
+![image](https://images.weserv.nl/?url=tvax3.sinaimg.cn/large/9fbe0bc0gy1i4278yn7imj20s60be0v9.jpg)
 
 我的感想是，所有的语言都很美丽，但有的语言比其他的语言更贵 lol
 

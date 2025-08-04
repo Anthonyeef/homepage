@@ -1,0 +1,4 @@
+[debug] [2025-08-04T15:24:49.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-04T15:24:49.834Z] > authorizing via signed-in user (yifen.wu@grabtaxi.com)
+[debug] [2025-08-04T15:29:49.316Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-04T15:29:49.319Z] > authorizing via signed-in user (yifen.wu@grabtaxi.com)

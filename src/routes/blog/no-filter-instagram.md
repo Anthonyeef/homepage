@@ -5,7 +5,7 @@ excerpt: "当达到了 10 亿用户的时候，一切的小问题都会被放大
 tags: ""
 ---
 
-![](https://tva1.sinaimg.cn/large/0081Kckwly1gm2d9v1tjwj317v0u0af6.jpg)
+![](https://images.weserv.nl/?url=tva1.sinaimg.cn/large/0081Kckwly1gm2d9v1tjwj317v0u0af6.jpg)
 
 最近在微信读书上看完了 《解密 Instagram》，非常非常喜欢。我平时刷 Twitter 和 Instagram 的时间非常多，差不多除了刷豆瓣之外就是打开 Twitter 和 Instagram。这本书里用了很多的篇幅去写两个产品之间的竞争，还有 Instagram 创始人 Kevin Systrom 丰富的内心戏 (从创建公司，到被 Facebook 收购，到最后退出 Instagram)。
 
