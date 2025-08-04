@@ -47,7 +47,7 @@ tags:
 
 再观察了一下，发现 block 样式的 `<code>` 还有一个 class 是 `grvsc-code`。
 
-![](https://images.weserv.nl/?url=tva1.sinaimg.cn/large/007S8ZIlly1gdqwuibnabj32540rgdpl.jpg)
+![](https://raw.githubusercontent.com/Anthonyeef/homepage/main/static/images/gatsby-blog-1.jpg)
 
 所以只要保证 `选中 grvsc-code 之外的其他 code 标签` 就可以了。css 里的选择器可以这么写：
 
