@@ -7,6 +7,10 @@
                 {
                         "source": "/my-weight/:path*",
                         "destination": "https://svelte-weight-tracker.vercel.app/:path*"
+                },
+                {
+                        "source": "/coffee-2025/:path*",
+                        "destination": "https://coffee-2025-yifens-projects.vercel.app/coffee-2025/:path*"
                 }
         ]
 } 
