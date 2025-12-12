@@ -1,8 +1,15 @@
 <script>
     import '$lib/styles/style.scss'
     import { page } from '$app/stores'
+    import { onMount } from 'svelte'
+    import { dev } from '$app/environment'
+    import { inject } from '@vercel/analytics'
     
     $: isBlogs = $page.route?.id?.includes('/blog/[slug]')
+    
+    onMount(() => {
+        inject({ mode: dev ? 'development' : 'production' })
+    })
 </script>
 
 <div class="container">

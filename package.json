@@ -29,5 +29,8 @@
 	"engines": {
 		"node": "24.x"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@vercel/analytics": "^1.6.1"
+	}
 }
