@@ -41,3 +41,4 @@ internal
 .eslintcache
 .svelte-kit
 .vercel
+.env*.local

@@ -10,7 +10,8 @@ const config = {
 		}),
 		prerender: {
 			handleHttpError: 'warn',
-			entries: ['*']
+			entries: ['*'],
+			handleMissingId: 'warn'
 		},
 	},
 
