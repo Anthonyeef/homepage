@@ -1,20 +1,28 @@
 {
-        "buildCommand": "npm run build",
-        "outputDirectory": "build",
-        "framework": "sveltekit",
-        "installCommand": "npm install",
-        "rewrites": [
-                {
-                        "source": "/coffee-2025/:path*",
-                        "destination": "https://coffee-2025.vercel.app/coffee-2025/:path*"
-                },
-                {
-                        "source": "/coffee-2025",
-                        "destination": "https://coffee-2025.vercel.app/coffee-2025/"
-                },
-                {
-                        "source": "/my-weight/:path*",
-                        "destination": "https://svelte-weight-tracker.vercel.app/:path*"
-                }
-        ]
-} 
+	"buildCommand": "npm run build",
+	"outputDirectory": "build",
+	"framework": "sveltekit",
+	"installCommand": "npm install",
+	"rewrites": [
+		{
+			"source": "/coffee-2025/:path*",
+			"destination": "https://coffee-2025.vercel.app/coffee-2025/:path*"
+		},
+		{
+			"source": "/coffee-2025",
+			"destination": "https://coffee-2025.vercel.app/coffee-2025/"
+		},
+		{
+			"source": "/my-weight/:path*",
+			"destination": "https://svelte-weight-tracker.vercel.app/:path*"
+		},
+		{
+			"source": "/eva-sticker/:path*",
+			"destination": "/eva-sticker/:path*"
+		},
+		{
+			"source": "/eva-sticker",
+			"destination": "/eva-sticker/index.html"
+		}
+	]
+}
