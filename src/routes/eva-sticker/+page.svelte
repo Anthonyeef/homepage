@@ -527,48 +527,61 @@
     resize: vertical;
   }
 
-  /* Color Grid */
+  /* Color Grid - Smaller compact layout */
   .color-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
   }
 
   .color-option {
-    aspect-ratio: 1;
+    height: 36px;
     border: 2px solid transparent;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     position: relative;
-    transition: all 0.3s;
+    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Share Tech Mono', monospace;
-    font-weight: 600;
-    font-size: 0.7rem;
+    font-weight: 500;
+    font-size: 0.6rem;
     background: transparent;
+    letter-spacing: 0.05em;
   }
 
   .color-option:hover {
-    transform: scale(1.05);
-    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
   .color-option.active {
-    border-color: #fff;
-    box-shadow: 
-      0 0 10px currentColor,
-      inset 0 0 20px rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8), 0 0 0 4px currentColor;
   }
 
   .color-option.active::after {
-    content: '◆';
+    content: '✓';
     position: absolute;
-    bottom: 2px;
-    right: 2px;
-    font-size: 0.6rem;
-    color: #fff;
+    bottom: 1px;
+    right: 3px;
+    font-size: 0.5rem;
+    color: inherit;
+    font-weight: bold;
+  }
+
+  @media (max-width: 480px) {
+    .color-grid {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+    }
+    
+    .color-option {
+      height: 32px;
+      font-size: 0.55rem;
+    }
   }
 
   /* Sliders */
