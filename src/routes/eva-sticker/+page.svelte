@@ -430,16 +430,21 @@
     font-weight: 600;
   }
 
-  /* Main Content */
+  /* Main Content - Single column by default for homepage compatibility */
   .main-content {
-    display: grid;
-    grid-template-columns: 380px 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  @media (max-width: 1200px) {
+  /* Only show side-by-side on very wide screens */
+  @media (min-width: 1400px) {
     .main-content {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      max-width: none;
     }
   }
 
