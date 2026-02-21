@@ -1,5 +1,9 @@
 <script>
-    import { onMount } from 'svelte';
+    import projects from '$lib/data/projects.json';
+    
+    function isExternal(type) {
+        return type === 'external';
+    }
 </script>
 
 <svelte:head>
@@ -10,27 +14,44 @@
 <div class="projects-container">
     <h1 class="page-title">Projects</h1>
     
-    <div class="projects-grid">
-        <a href="/eva-sticker" class="project-card">
-            <div class="project-icon">◈</div>
-            <h2 class="project-title">EVA Sticker Generator</h2>
-            <p class="project-description">
-                Generate Evangelion-style warning stickers with custom text, colors, and dimensions.
-            </p>
-            <div class="project-tags">
-                <span class="tag">Svelte</span>
-                <span class="tag">Tool</span>
-            </div>
-        </a>
-
-        <!-- Placeholder for future projects -->
-        <div class="project-card coming-soon">
-            <div class="project-icon">◉</div>
-            <h2 class="project-title">More Coming Soon</h2>
-            <p class="project-description">
-                Stay tuned for more projects.
-            </p>
-        </div>
+    <div class="projects-list">
+        {#each projects as project}
+            <a 
+                href={project.link} 
+                class="project-item"
+                target={isExternal(project.type) ? "_blank" : "_self"}
+                rel={isExternal(project.type) ? "noopener noreferrer" : ""}
+            >
+                <div class="project-image">
+                    {#if project.image}
+                        <img src={project.image} alt={project.title} loading="lazy" />
+                    {:else}
+                        <div class="project-image-placeholder">
+                            <span>◈</span>
+                        </div>
+                    {/if}
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2 class="project-title">{project.title}</h2>
+                        {#if isExternal(project.type)}
+                            <span class="external-indicator">↗</span>
+                        {/if}
+                    </div>
+                    
+                    <p class="project-description">{project.description}</p>
+                    
+                    {#if project.tags && project.tags.length > 0}
+                        <div class="project-tags">
+                            {#each project.tags as tag}
+                                <span class="tag">{tag}</span>
+                            {/each}
+                        </div>
+                    {/if}
+                </div>
+            </a>
+        {/each}
     </div>
 </div>
 
@@ -42,65 +63,92 @@
     }
 
     .page-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 700;
         margin-bottom: 2rem;
         color: #1a1a1a;
     }
 
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    .projects-list {
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
     }
 
-    .project-card {
-        display: block;
-        padding: 1.5rem;
+    .project-item {
+        display: flex;
+        gap: 1.25rem;
+        padding: 1.25rem;
         background: #fff;
-        border: 1px solid #e0e0e0;
+        border: 1px solid #e8e8e8;
         border-radius: 8px;
         text-decoration: none;
         color: inherit;
         transition: all 0.2s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     }
 
-    .project-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    .project-item:hover {
         border-color: #0097A7;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transform: translateY(-1px);
     }
 
-    .project-card.coming-soon {
-        opacity: 0.6;
-        cursor: default;
+    .project-image {
+        flex-shrink: 0;
+        width: 120px;
+        height: 80px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #f5f5f5;
     }
 
-    .project-card.coming-soon:hover {
-        transform: none;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-        border-color: #e0e0e0;
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .project-icon {
-        font-size: 1.5rem;
+    .project-image-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
         color: #0097A7;
-        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
+    }
+
+    .project-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .project-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .project-title {
         font-size: 1.125rem;
         font-weight: 600;
-        margin: 0 0 0.5rem 0;
+        margin: 0;
         color: #1a1a1a;
+    }
+
+    .external-indicator {
+        font-size: 0.875rem;
+        color: #0097A7;
+        opacity: 0.7;
     }
 
     .project-description {
         font-size: 0.9rem;
-        color: #666;
+        color: #555;
         line-height: 1.5;
-        margin: 0 0 1rem 0;
+        margin: 0 0 0.75rem 0;
     }
 
     .project-tags {
@@ -111,15 +159,25 @@
 
     .tag {
         font-size: 0.75rem;
-        padding: 0.25rem 0.5rem;
+        padding: 0.2rem 0.5rem;
         background: #f0f0f0;
         border-radius: 4px;
         color: #666;
     }
 
     @media (max-width: 600px) {
-        .projects-grid {
-            grid-template-columns: 1fr;
+        .project-item {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 160px;
+        }
+
+        .page-title {
+            font-size: 1.5rem;
         }
     }
 </style>

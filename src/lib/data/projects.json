@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "eva-sticker",
+    "title": "EVA Sticker Generator",
+    "description": "Generate Evangelion-style warning stickers with custom text, colors, and dimensions. Built with SvelteKit.",
+    "image": "/images/eva-sticker-preview.png",
+    "link": "/eva-sticker",
+    "type": "internal",
+    "tags": ["SvelteKit", "Tool", "Design"]
+  },
+  {
+    "slug": "homepage",
+    "title": "Personal Homepage",
+    "description": "My personal website built with SvelteKit, featuring blog, project showcases, and various interactive tools.",
+    "image": "/images/homepage-preview.png",
+    "link": "https://github.com/Anthonyeef/homepage",
+    "type": "external",
+    "tags": ["SvelteKit", "Blog", "Open Source"]
+  }
+]
