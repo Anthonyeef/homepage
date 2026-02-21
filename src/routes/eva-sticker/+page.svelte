@@ -283,17 +283,20 @@
 
   .eva-page {
     --nerv-orange: #FF6B35;
-    --magi-green: #00E676;
-    --terminal-cyan: #00BCD4;
-    --alert-red: #F44336;
-    --at-field: #FFC107;
-    --dark-bg: #0a0a0f;
-    --panel-bg: rgba(10, 10, 15, 0.9);
+    --magi-green: #00C853;
+    --terminal-cyan: #0097A7;
+    --alert-red: #D32F2F;
+    --at-field: #FFA000;
+    --light-bg: #f5f5f5;
+    --panel-bg: rgba(255, 255, 255, 0.95);
+    --text-primary: #1a1a1a;
+    --text-secondary: #444;
+    --border-color: rgba(0, 151, 167, 0.3);
     
     font-family: 'Zen Old Mincho', 'Noto Serif JP', 'Noto Serif SC', 'Shippori Mincho', serif;
-    background: var(--dark-bg);
+    background: var(--light-bg);
     min-height: 100vh;
-    color: #fff;
+    color: var(--text-primary);
     overflow-x: hidden;
     position: relative;
   }
@@ -306,19 +309,19 @@
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(30deg, rgba(0, 188, 212, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 188, 212, 0.03) 87.5%, rgba(0, 188, 212, 0.03)),
-      linear-gradient(150deg, rgba(0, 188, 212, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 188, 212, 0.03) 87.5%, rgba(0, 188, 212, 0.03)),
-      linear-gradient(30deg, rgba(0, 188, 212, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 188, 212, 0.03) 87.5%, rgba(0, 188, 212, 0.03)),
-      linear-gradient(150deg, rgba(0, 188, 212, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 188, 212, 0.03) 87.5%, rgba(0, 188, 212, 0.03)),
-      linear-gradient(60deg, rgba(123, 31, 162, 0.02) 25%, transparent 25.5%, transparent 75%, rgba(123, 31, 162, 0.02) 75%, rgba(123, 31, 162, 0.02)),
-      linear-gradient(60deg, rgba(123, 31, 162, 0.02) 25%, transparent 25.5%, transparent 75%, rgba(123, 31, 162, 0.02) 75%, rgba(123, 31, 162, 0.02));
+      linear-gradient(30deg, rgba(0, 151, 167, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(0, 151, 167, 0.05) 87.5%, rgba(0, 151, 167, 0.05)),
+      linear-gradient(150deg, rgba(0, 151, 167, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(0, 151, 167, 0.05) 87.5%, rgba(0, 151, 167, 0.05)),
+      linear-gradient(30deg, rgba(0, 151, 167, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(0, 151, 167, 0.05) 87.5%, rgba(0, 151, 167, 0.05)),
+      linear-gradient(150deg, rgba(0, 151, 167, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(0, 151, 167, 0.05) 87.5%, rgba(0, 151, 167, 0.05)),
+      linear-gradient(60deg, rgba(255, 107, 53, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(255, 107, 53, 0.03) 75%, rgba(255, 107, 53, 0.03)),
+      linear-gradient(60deg, rgba(255, 107, 53, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(255, 107, 53, 0.03) 75%, rgba(255, 107, 53, 0.03));
     background-size: 80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
     pointer-events: none;
     z-index: 0;
   }
 
-  /* Scanline Effect */
+  /* Scanline Effect - subtle on light background */
   .scanlines {
     position: fixed;
     top: 0;
@@ -327,15 +330,15 @@
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(255,255,255,0),
-      rgba(255,255,255,0) 50%,
-      rgba(0,0,0,0.1) 50%,
-      rgba(0,0,0,0.1)
+      rgba(0,0,0,0),
+      rgba(0,0,0,0) 50%,
+      rgba(0,0,0,0.02) 50%,
+      rgba(0,0,0,0.02)
     );
     background-size: 100% 4px;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   .container {
@@ -348,11 +351,12 @@
 
   /* Header */
   header {
-    background: linear-gradient(180deg, rgba(123, 31, 162, 0.2) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.8) 100%);
     border-bottom: 2px solid var(--nerv-orange);
     padding: 30px 40px;
     margin-bottom: 40px;
     position: relative;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
   }
 
   header::before {
@@ -395,6 +399,7 @@
     color: var(--terminal-cyan);
     margin-top: 10px;
     letter-spacing: 0.1em;
+    opacity: 0.8;
   }
 
   .status-indicator {
@@ -422,6 +427,7 @@
   .status-text {
     color: var(--magi-green);
     letter-spacing: 0.1em;
+    font-weight: 600;
   }
 
   /* Main Content */
@@ -440,16 +446,16 @@
   /* Panel */
   .panel {
     background: var(--panel-bg);
-    border: 1px solid rgba(0, 188, 212, 0.2);
-    border-radius: 4px;
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
   }
 
   .panel-header {
-    background: rgba(0, 188, 212, 0.1);
+    background: rgba(0, 151, 167, 0.08);
     padding: 15px 20px;
-    border-bottom: 1px solid rgba(0, 188, 212, 0.2);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -458,12 +464,13 @@
   .panel-icon {
     color: var(--terminal-cyan);
     font-size: 1.2rem;
+    opacity: 0.9;
   }
 
   .panel-header h2 {
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.15em;
     color: var(--terminal-cyan);
     margin: 0;
@@ -475,7 +482,7 @@
 
   .panel-footer {
     padding: 20px 25px;
-    border-top: 1px solid rgba(0, 188, 212, 0.2);
+    border-top: 1px solid var(--border-color);
   }
 
   /* Control Groups */
@@ -488,8 +495,9 @@
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
-    color: var(--terminal-cyan);
+    color: var(--text-secondary);
     margin-bottom: 8px;
+    font-weight: 500;
   }
 
   .control-group input[type="text"],
@@ -497,13 +505,14 @@
   .control-group select {
     width: 100%;
     padding: 12px 15px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 188, 212, 0.3);
-    border-radius: 2px;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
     font-family: 'Zen Old Mincho', 'Noto Serif JP', 'Noto Serif SC', 'Shippori Mincho', serif;
     font-size: 0.95rem;
     transition: all 0.3s;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .control-group input:focus,
@@ -511,7 +520,8 @@
   .control-group select:focus {
     outline: none;
     border-color: var(--terminal-cyan);
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+    box-shadow: 0 0 0 3px rgba(0, 151, 167, 0.15);
+    background: #fff;
   }
 
   .control-group textarea {
@@ -568,16 +578,16 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.04);
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   .slider-container input[type="range"] {
     flex: 1;
     -webkit-appearance: none;
     height: 4px;
-    background: rgba(0, 188, 212, 0.2);
+    background: rgba(0, 151, 167, 0.2);
     border-radius: 2px;
     outline: none;
   }
@@ -595,7 +605,7 @@
   .slider-value {
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.8rem;
-    color: var(--terminal-cyan);
+    color: var(--text-secondary);
     min-width: 50px;
     text-align: right;
   }
@@ -614,7 +624,7 @@
     cursor: pointer;
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.8rem;
-    color: #fff;
+    color: var(--text-secondary);
   }
 
   .checkbox-label input[type="checkbox"] {
@@ -631,10 +641,10 @@
     justify-content: center;
     align-items: center;
     background: 
-      linear-gradient(45deg, rgba(0, 188, 212, 0.02) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(0, 188, 212, 0.02) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(0, 188, 212, 0.02) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(0, 188, 212, 0.02) 75%);
+      linear-gradient(45deg, rgba(0, 151, 167, 0.03) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0, 151, 167, 0.03) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0, 151, 167, 0.03) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0, 151, 167, 0.03) 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   }
@@ -720,13 +730,13 @@
   .download-btn {
     width: 100%;
     padding: 18px 30px;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 151, 167, 0.1) 100%);
     border: 2px solid var(--nerv-orange);
-    border-radius: 4px;
-    color: var(--nerv-orange);
+    border-radius: 6px;
+    color: #D84315;
     font-family: 'Oswald', sans-serif;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.15em;
     cursor: pointer;
     transition: all 0.3s;
@@ -745,15 +755,13 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.15), transparent);
     transition: left 0.5s;
   }
 
   .download-btn:hover {
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(0, 188, 212, 0.2) 100%);
-    box-shadow: 
-      0 0 20px rgba(255, 107, 53, 0.3),
-      0 0 40px rgba(0, 188, 212, 0.2);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(0, 151, 167, 0.15) 100%);
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
     transform: translateY(-2px);
   }
 
