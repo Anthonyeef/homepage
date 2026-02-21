@@ -293,7 +293,7 @@
     --text-secondary: #444;
     --border-color: rgba(0, 151, 167, 0.3);
     
-    font-family: 'Zen Old Mincho', 'Noto Serif JP', 'Noto Serif SC', 'Shippori Mincho', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans JP', sans-serif;
     background: var(--light-bg);
     min-height: 100vh;
     color: var(--text-primary);
@@ -504,12 +504,14 @@
   .control-group textarea,
   .control-group select {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 12px 15px;
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     color: var(--text-primary);
-    font-family: 'Zen Old Mincho', 'Noto Serif JP', 'Noto Serif SC', 'Shippori Mincho', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans JP', sans-serif;
     font-size: 0.95rem;
     transition: all 0.3s;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -546,9 +548,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Zen Old Mincho', 'Noto Serif JP', 'Shippori Mincho', serif;
-    font-weight: 900;
-    font-size: 0.75rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 600;
+    font-size: 0.7rem;
     background: transparent;
   }
 
@@ -711,18 +713,53 @@
 
   @media (max-width: 768px) {
     #sticker-preview.square {
-      width: 300px;
-      height: 300px;
+      width: 280px;
+      height: 280px;
+      padding: 15px;
     }
     
     #sticker-preview.rectangle {
-      width: 300px;
-      height: 225px;
+      width: 280px;
+      height: 210px;
+      padding: 15px 25px;
     }
     
     #sticker-preview.vertical.rectangle {
-      width: 225px;
-      height: 300px;
+      width: 210px;
+      height: 280px;
+      padding: 25px 15px;
+    }
+
+    #sticker-preview.vertical.square {
+      width: 280px;
+      height: 280px;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #sticker-preview.square {
+      width: 240px;
+      height: 240px;
+      padding: 12px;
+    }
+    
+    #sticker-preview.rectangle {
+      width: 240px;
+      height: 180px;
+      padding: 12px 20px;
+    }
+    
+    #sticker-preview.vertical.rectangle {
+      width: 180px;
+      height: 240px;
+      padding: 20px 12px;
+    }
+
+    #sticker-preview.vertical.square {
+      width: 240px;
+      height: 240px;
+      padding: 12px;
     }
   }
 
@@ -782,11 +819,11 @@
     }
 
     .logo-section h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     header {
-      padding: 20px;
+      padding: 15px;
     }
 
     .container {
@@ -799,6 +836,59 @@
 
     .color-grid {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .control-group input[type="text"],
+    .control-group textarea,
+    .control-group select {
+      font-size: 16px; /* Prevent zoom on iOS */
+      padding: 10px 12px;
+    }
+
+    .preview-area {
+      min-height: auto;
+      padding: 20px 0;
+    }
+
+    .panel-footer {
+      padding: 15px;
+    }
+
+    .download-btn {
+      font-size: 1rem;
+      padding: 15px 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-section h1 {
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+    }
+
+    .subtitle {
+      font-size: 0.75rem;
+    }
+
+    .status-text {
+      font-size: 0.7rem;
+    }
+
+    .color-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .color-option {
+      font-size: 0.6rem;
+    }
+
+    .panel-header h2 {
+      font-size: 0.75rem;
+    }
+
+    .control-group label {
+      font-size: 0.7rem;
     }
   }
 </style>
