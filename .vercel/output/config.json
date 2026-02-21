@@ -2,17 +2,6 @@
 	"version": 3,
 	"routes": [
 		{
-			"src": "/about",
-			"dest": "/about/"
-		},
-		{
-			"src": "/about/",
-			"status": 308,
-			"headers": {
-				"Location": "/about"
-			}
-		},
-		{
 			"src": "/blog",
 			"dest": "/blog/"
 		},
@@ -24,14 +13,47 @@
 			}
 		},
 		{
-			"src": "/contact",
-			"dest": "/contact/"
+			"src": "/blog/tags",
+			"dest": "/blog/tags/"
 		},
 		{
-			"src": "/contact/",
+			"src": "/blog/tags/",
 			"status": 308,
 			"headers": {
-				"Location": "/contact"
+				"Location": "/blog/tags"
+			}
+		},
+		{
+			"src": "/blog/2025-coffee-log",
+			"dest": "/blog/2025-coffee-log/"
+		},
+		{
+			"src": "/blog/2025-coffee-log/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/2025-coffee-log"
+			}
+		},
+		{
+			"src": "/blog/should-i-speak-english-with-llm",
+			"dest": "/blog/should-i-speak-english-with-llm/"
+		},
+		{
+			"src": "/blog/should-i-speak-english-with-llm/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/should-i-speak-english-with-llm"
+			}
+		},
+		{
+			"src": "/blog/nine-year-work-anniversary",
+			"dest": "/blog/nine-year-work-anniversary/"
+		},
+		{
+			"src": "/blog/nine-year-work-anniversary/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/nine-year-work-anniversary"
 			}
 		},
 		{
@@ -101,6 +123,171 @@
 			}
 		},
 		{
+			"src": "/blog/tags/AI",
+			"dest": "/blog/tags/AI/"
+		},
+		{
+			"src": "/blog/tags/AI/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/AI"
+			}
+		},
+		{
+			"src": "/blog/tags/Blog",
+			"dest": "/blog/tags/Blog/"
+		},
+		{
+			"src": "/blog/tags/Blog/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Blog"
+			}
+		},
+		{
+			"src": "/blog/tags/Career",
+			"dest": "/blog/tags/Career/"
+		},
+		{
+			"src": "/blog/tags/Career/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Career"
+			}
+		},
+		{
+			"src": "/blog/tags/Coffee",
+			"dest": "/blog/tags/Coffee/"
+		},
+		{
+			"src": "/blog/tags/Coffee/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Coffee"
+			}
+		},
+		{
+			"src": "/blog/tags/Gatsby",
+			"dest": "/blog/tags/Gatsby/"
+		},
+		{
+			"src": "/blog/tags/Gatsby/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Gatsby"
+			}
+		},
+		{
+			"src": "/blog/tags/Kimi",
+			"dest": "/blog/tags/Kimi/"
+		},
+		{
+			"src": "/blog/tags/Kimi/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Kimi"
+			}
+		},
+		{
+			"src": "/blog/tags/Language",
+			"dest": "/blog/tags/Language/"
+		},
+		{
+			"src": "/blog/tags/Language/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Language"
+			}
+		},
+		{
+			"src": "/blog/tags/Lifelog",
+			"dest": "/blog/tags/Lifelog/"
+		},
+		{
+			"src": "/blog/tags/Lifelog/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Lifelog"
+			}
+		},
+		{
+			"src": "/blog/tags/Lifestyle",
+			"dest": "/blog/tags/Lifestyle/"
+		},
+		{
+			"src": "/blog/tags/Lifestyle/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Lifestyle"
+			}
+		},
+		{
+			"src": "/blog/tags/LLM",
+			"dest": "/blog/tags/LLM/"
+		},
+		{
+			"src": "/blog/tags/LLM/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/LLM"
+			}
+		},
+		{
+			"src": "/blog/tags/Python",
+			"dest": "/blog/tags/Python/"
+		},
+		{
+			"src": "/blog/tags/Python/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Python"
+			}
+		},
+		{
+			"src": "/blog/tags/React",
+			"dest": "/blog/tags/React/"
+		},
+		{
+			"src": "/blog/tags/React/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/React"
+			}
+		},
+		{
+			"src": "/blog/tags/Remote",
+			"dest": "/blog/tags/Remote/"
+		},
+		{
+			"src": "/blog/tags/Remote/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Remote"
+			}
+		},
+		{
+			"src": "/blog/tags/Technology",
+			"dest": "/blog/tags/Technology/"
+		},
+		{
+			"src": "/blog/tags/Technology/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Technology"
+			}
+		},
+		{
+			"src": "/blog/tags/Work",
+			"dest": "/blog/tags/Work/"
+		},
+		{
+			"src": "/blog/tags/Work/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/tags/Work"
+			}
+		},
+		{
 			"src": "/_app/immutable/.+",
 			"headers": {
 				"cache-control": "public, immutable, max-age=31536000"
@@ -108,6 +295,14 @@
 		},
 		{
 			"handle": "filesystem"
+		},
+		{
+			"src": "^/coffee-2025/?(?:/__data.json)?$",
+			"dest": "/coffee-2025"
+		},
+		{
+			"src": "^/coffee-2025(/.*)?/?(?:/__data.json)?$",
+			"dest": "/coffee-2025/[...path]"
 		},
 		{
 			"src": "/.*",
@@ -118,14 +313,20 @@
 		"index.html": {
 			"path": ""
 		},
-		"about.html": {
-			"path": "about"
-		},
 		"blog.html": {
 			"path": "blog"
 		},
-		"contact.html": {
-			"path": "contact"
+		"blog/tags.html": {
+			"path": "blog/tags"
+		},
+		"blog/2025-coffee-log.html": {
+			"path": "blog/2025-coffee-log"
+		},
+		"blog/should-i-speak-english-with-llm.html": {
+			"path": "blog/should-i-speak-english-with-llm"
+		},
+		"blog/nine-year-work-anniversary.html": {
+			"path": "blog/nine-year-work-anniversary"
 		},
 		"blog/experience-the-ocean-like-a-pirate.html": {
 			"path": "blog/experience-the-ocean-like-a-pirate"
@@ -144,6 +345,51 @@
 		},
 		"blog/thought-about-remote-working.html": {
 			"path": "blog/thought-about-remote-working"
+		},
+		"blog/tags/AI.html": {
+			"path": "blog/tags/AI"
+		},
+		"blog/tags/Blog.html": {
+			"path": "blog/tags/Blog"
+		},
+		"blog/tags/Career.html": {
+			"path": "blog/tags/Career"
+		},
+		"blog/tags/Coffee.html": {
+			"path": "blog/tags/Coffee"
+		},
+		"blog/tags/Gatsby.html": {
+			"path": "blog/tags/Gatsby"
+		},
+		"blog/tags/Kimi.html": {
+			"path": "blog/tags/Kimi"
+		},
+		"blog/tags/Language.html": {
+			"path": "blog/tags/Language"
+		},
+		"blog/tags/Lifelog.html": {
+			"path": "blog/tags/Lifelog"
+		},
+		"blog/tags/Lifestyle.html": {
+			"path": "blog/tags/Lifestyle"
+		},
+		"blog/tags/LLM.html": {
+			"path": "blog/tags/LLM"
+		},
+		"blog/tags/Python.html": {
+			"path": "blog/tags/Python"
+		},
+		"blog/tags/React.html": {
+			"path": "blog/tags/React"
+		},
+		"blog/tags/Remote.html": {
+			"path": "blog/tags/Remote"
+		},
+		"blog/tags/Technology.html": {
+			"path": "blog/tags/Technology"
+		},
+		"blog/tags/Work.html": {
+			"path": "blog/tags/Work"
 		}
 	}
 }

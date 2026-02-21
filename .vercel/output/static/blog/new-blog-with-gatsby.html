@@ -6,21 +6,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 		<link href="../_app/immutable/assets/0.C0b0Q4_Z.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/6.Da5qQr-a.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.Tc77bm6n.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/ZXTKKnjn.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BJ9OYGg-.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.B2CGpgGG.js">
+		<link href="../_app/immutable/assets/5.pW4EUgeH.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.C73HWGY3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CEOBgYce.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DYJusUxY.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.FCYPRWcZ.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/C1FmrZbK.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/IHki7fMi.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.8HDRLHFJ.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/BH_2txyQ.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/2.C8wi0bOY.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/6.D0ctayso.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Dpw3AHSJ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BqdOx5lc.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.D8toQJr6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.DQn_UKFb.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/D6YF6ztN.js">
 	</head>
 	<body>
-		<div>  <div class="container"> <main><article><h1>搭了一个新的个人网站</h1>  <p class="date svelte-1oyyb0n">Published: 2020-04-04</p> <p data-svelte-h="svelte-1lwxcri">最近一段时间都在学 React。作为作业，用 Gatsby 搭建了一个新的个人主页。打算陆续从 Typlog 上搬运过来旧的日记，还有实践一些简单的前端页面。</p> <h3 data-svelte-h="svelte-5jmh96">为什么不继续使用 Typlog 呢？</h3> <p data-svelte-h="svelte-zyh1wh">我觉得 Typlog 很好，后台功能也很完善。但我觉得 Typlog 渲染 Markdown 出来的样式不够好看。可能就是自己觉得不够好看吧。</p> <p data-svelte-h="svelte-1yspgm0">除此之外就是一些小细节了，例如：想在文章中间插入一张图片的时候，图片的宽度想等于文字的宽度，得选择某一个固定的模板才可以；文章的头图的宽度也不能设置成和段落等宽，被拉伸后的头图感觉很不好看。</p> <p data-svelte-h="svelte-47eh4y">还有一个原因是今年 Typlog 的几个小改动：</p> <ol data-svelte-h="svelte-408j7h"><li>老用户的套餐变更，不能随意增加自己的站点了；</li> <li>原本的 <code>.com</code> 域名变动，变成了 <code>.io</code> 域名。</li></ol> <p data-svelte-h="svelte-1lqvzbq">虽然小明也提前在 Telegram group 里做了预告，但我还是感觉到，自己的个人主页这样被不稳定因素影响，还是挺被动的。</p> <p data-svelte-h="svelte-1avtppe">我想自己做一个主页来 host 一些 Markdown 文件，把控制权掌握在自己手里。</p> <h3 data-svelte-h="svelte-sc2lcw">细节</h3> <p data-svelte-h="svelte-1mlpnip">要自己从零开始搭一个个人主页，感觉还有很多的细节需要考虑。Gatsby 不是类似 Hexo 那样的博客框架，虽然也有提供一些成熟的 blog starter，但如果打算 build from scratch、把它当成我自己的一个网站项目来做，还是有很多事情要做。比如现在我就在想，怎么做 paging；怎么做 tag 索引；怎么加上 GA……一些 Hexo 里头开箱即用的功能，得搜索一下再手动加上。</p> <p data-svelte-h="svelte-1qxu68z">但我觉得应该不会是太大的问题。最近经常有一种迷之自信，总感觉一般只要不是太难的问题，Google 一下都可以搜到答案。如果不自己动手做这个项目，反而失去了 <code>去了解自己未知的东西</code> 的机会。</p> <p data-svelte-h="svelte-vo17yu">下面记录自己遇到的问题，以及解决的方案：</p> <h4 data-svelte-h="svelte-l7sexi">客制化代码高亮</h4> <p data-svelte-h="svelte-1mi1sr8">我预感自己发布的内容里会出现不少的代码片段。Gatsby 提供了 <code>dangerouslySetInnerHTML</code> 的内容来放置 Markdown 转换出来的 html，但里面的一些内容没有经过样式调整，显得非常朴素。</p> <p data-svelte-h="svelte-12euwaa">要实现代码高亮很简单，搜了一下一般都是通过插件来做的。Gatsby 的插件市场里搜索 <code>code hight</code> 就可以找到非常多的插件。我挑了<a href="https://www.gatsbyjs.org/packages/gatsby-remark-vscode/?=highlight" rel="nofollow">这个</a>，高亮的样式跟 VS Code 是一样的。</p> <h4 data-svelte-h="svelte-1v3jds4">区分开 inline code</h4> <p data-svelte-h="svelte-1mo583v">上面这一步可以让 Markdown 中 block 样式的代码块有高亮的效果。但在文本中的 <code>inline code</code> 的效果不是很好，我想自己写 CSS 装饰一下。看了一下渲染之后的 dom 内容，发现其实都是 <code>&lt;code&gt;</code> 标签包裹起来的内容。
-如果直接对 <code>&lt;code&gt;</code> 进行装饰，可能就会同时影响到 inline 和 code block 的样式了。</p> <p data-svelte-h="svelte-1pd8grc">再观察了一下，发现 block 样式的 <code>&lt;code&gt;</code> 还有一个 class 是 <code>grvsc-code</code>。</p> <p data-svelte-h="svelte-18xujh0"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdqwuibnabj32540rgdpl.jpg"></p> <p data-svelte-h="svelte-fopxg5">所以只要保证 <code>选中 grvsc-code 之外的其他 code 标签</code> 就可以了。css 里的选择器可以这么写：</p> <pre class="language-css"><!-- HTML_TAG_START --><code class="language-css"><span class="token selector">code:not(.grvsc-code)</span> <span class="token punctuation">&#123;</span>
+		<div>  <div class="container"> <main><article><h1>搭了一个新的个人网站</h1>  <div class="post-tags svelte-galqz7"><a href="/blog/tags/Technology" class="tag-link svelte-galqz7">#Technology</a><a href="/blog/tags/React" class="tag-link svelte-galqz7">#React</a><a href="/blog/tags/Gatsby" class="tag-link svelte-galqz7">#Gatsby</a><a href="/blog/tags/Blog" class="tag-link svelte-galqz7">#Blog</a></div> <p class="date svelte-galqz7">Published: 2020-04-04</p> <p data-svelte-h="svelte-1lwxcri">最近一段时间都在学 React。作为作业，用 Gatsby 搭建了一个新的个人主页。打算陆续从 Typlog 上搬运过来旧的日记，还有实践一些简单的前端页面。</p> <h3 data-svelte-h="svelte-5jmh96">为什么不继续使用 Typlog 呢？</h3> <p data-svelte-h="svelte-zyh1wh">我觉得 Typlog 很好，后台功能也很完善。但我觉得 Typlog 渲染 Markdown 出来的样式不够好看。可能就是自己觉得不够好看吧。</p> <p data-svelte-h="svelte-1yspgm0">除此之外就是一些小细节了，例如：想在文章中间插入一张图片的时候，图片的宽度想等于文字的宽度，得选择某一个固定的模板才可以；文章的头图的宽度也不能设置成和段落等宽，被拉伸后的头图感觉很不好看。</p> <p data-svelte-h="svelte-47eh4y">还有一个原因是今年 Typlog 的几个小改动：</p> <ol data-svelte-h="svelte-408j7h"><li>老用户的套餐变更，不能随意增加自己的站点了；</li> <li>原本的 <code>.com</code> 域名变动，变成了 <code>.io</code> 域名。</li></ol> <p data-svelte-h="svelte-1lqvzbq">虽然小明也提前在 Telegram group 里做了预告，但我还是感觉到，自己的个人主页这样被不稳定因素影响，还是挺被动的。</p> <p data-svelte-h="svelte-1avtppe">我想自己做一个主页来 host 一些 Markdown 文件，把控制权掌握在自己手里。</p> <h3 data-svelte-h="svelte-sc2lcw">细节</h3> <p data-svelte-h="svelte-1mlpnip">要自己从零开始搭一个个人主页，感觉还有很多的细节需要考虑。Gatsby 不是类似 Hexo 那样的博客框架，虽然也有提供一些成熟的 blog starter，但如果打算 build from scratch、把它当成我自己的一个网站项目来做，还是有很多事情要做。比如现在我就在想，怎么做 paging；怎么做 tag 索引；怎么加上 GA……一些 Hexo 里头开箱即用的功能，得搜索一下再手动加上。</p> <p data-svelte-h="svelte-1qxu68z">但我觉得应该不会是太大的问题。最近经常有一种迷之自信，总感觉一般只要不是太难的问题，Google 一下都可以搜到答案。如果不自己动手做这个项目，反而失去了 <code>去了解自己未知的东西</code> 的机会。</p> <p data-svelte-h="svelte-vo17yu">下面记录自己遇到的问题，以及解决的方案：</p> <h4 data-svelte-h="svelte-l7sexi">客制化代码高亮</h4> <p data-svelte-h="svelte-1mi1sr8">我预感自己发布的内容里会出现不少的代码片段。Gatsby 提供了 <code>dangerouslySetInnerHTML</code> 的内容来放置 Markdown 转换出来的 html，但里面的一些内容没有经过样式调整，显得非常朴素。</p> <p data-svelte-h="svelte-12euwaa">要实现代码高亮很简单，搜了一下一般都是通过插件来做的。Gatsby 的插件市场里搜索 <code>code hight</code> 就可以找到非常多的插件。我挑了<a href="https://www.gatsbyjs.org/packages/gatsby-remark-vscode/?=highlight" rel="nofollow">这个</a>，高亮的样式跟 VS Code 是一样的。</p> <h4 data-svelte-h="svelte-1v3jds4">区分开 inline code</h4> <p data-svelte-h="svelte-1mo583v">上面这一步可以让 Markdown 中 block 样式的代码块有高亮的效果。但在文本中的 <code>inline code</code> 的效果不是很好，我想自己写 CSS 装饰一下。看了一下渲染之后的 dom 内容，发现其实都是 <code>&lt;code&gt;</code> 标签包裹起来的内容。
+如果直接对 <code>&lt;code&gt;</code> 进行装饰，可能就会同时影响到 inline 和 code block 的样式了。</p> <p data-svelte-h="svelte-1pd8grc">再观察了一下，发现 block 样式的 <code>&lt;code&gt;</code> 还有一个 class 是 <code>grvsc-code</code>。</p> <p data-svelte-h="svelte-ad8i8q"><img src="/images/gatsby-blog-1.jpg"></p> <p data-svelte-h="svelte-fopxg5">所以只要保证 <code>选中 grvsc-code 之外的其他 code 标签</code> 就可以了。css 里的选择器可以这么写：</p> <pre class="language-css"><!-- HTML_TAG_START --><code class="language-css"><span class="token selector">code:not(.grvsc-code)</span> <span class="token punctuation">&#123;</span>
   <span class="token property">padding</span><span class="token punctuation">:</span> 0.2em 0.4em<span class="token punctuation">;</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>27<span class="token punctuation">,</span> 31<span class="token punctuation">,</span> 35<span class="token punctuation">,</span> 0.05<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
@@ -44,22 +45,22 @@
 我提交了自己的模板。内容比较少，只要能拿到 body 和 title 告诉 Telegram 即可；但没办法立刻能生效，需要提交至少 10 个 link 可以应用这个模板的才行。</p> <p data-svelte-h="svelte-1f3phkn">后面继续搬运旧 blog 过来，再逐步添加吧。</p> <h4 data-svelte-h="svelte-n1jeqe">RSS</h4> <p data-svelte-h="svelte-jjjtz8">已经支持了。装了 <code>gatsby-plugin-feed</code> 这个插件，再在 config 里配置了一下就好了。地址在<a href="https://yifen.me/rss.xml" rel="nofollow">这里</a>。</p> <h4 data-svelte-h="svelte-1wvveu6">苹方字体</h4> <p data-svelte-h="svelte-1ee5mmq">在全局的 <code>global.css</code> 里加上了这个字体设置：</p> <pre class="language-css"><!-- HTML_TAG_START --><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
   <span class="token property">font-family</span><span class="token punctuation">:</span> -apple-system<span class="token punctuation">,</span> BlinkMacSystemFont<span class="token punctuation">,</span> <span class="token string">"Segoe UI"</span><span class="token punctuation">,</span> Roboto<span class="token punctuation">,</span> Oxygen<span class="token punctuation">,</span>
     Ubuntu<span class="token punctuation">,</span> Cantarell<span class="token punctuation">,</span> <span class="token string">"Open Sans"</span><span class="token punctuation">,</span> <span class="token string">"Helvetica Neue"</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1i0hat1">感谢朋友胡椒君~ 另外发现 VS Code 会补全这个 font-family，真方便。</p> <hr> <p data-svelte-h="svelte-126c64e">Todo:</p> <ul data-svelte-h="svelte-pq3eie"><li>Tag 索引</li> <li>旧 Markdown 文件图片迁移</li> <li>加一个 blog.yifen.me 的二级域名</li></ul> <blockquote data-svelte-h="svelte-f1jhqz"><p>*more content still WIP</p></blockquote> <div class="back-nav svelte-1oyyb0n" data-svelte-h="svelte-1fgbd2g"><a href="/blog" class="back-link svelte-1oyyb0n">← Back to posts</a></div> </article></main></div> 
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1i0hat1">感谢朋友胡椒君~ 另外发现 VS Code 会补全这个 font-family，真方便。</p> <hr> <p data-svelte-h="svelte-126c64e">Todo:</p> <ul data-svelte-h="svelte-pq3eie"><li>Tag 索引</li> <li>旧 Markdown 文件图片迁移</li> <li>加一个 blog.yifen.me 的二级域名</li></ul> <blockquote data-svelte-h="svelte-f1jhqz"><p>*more content still WIP</p></blockquote> <div class="back-nav svelte-galqz7" data-svelte-h="svelte-1fgbd2g"><a href="/blog" class="back-link svelte-galqz7">← Back to posts</a></div> </article></main></div> 
 			
 			<script>
 				{
-					__sveltekit_ig6t = {
+					__sveltekit_1adbk1h = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.Tc77bm6n.js"),
-						import("../_app/immutable/entry/app.B2CGpgGG.js")
+						import("../_app/immutable/entry/start.C73HWGY3.js"),
+						import("../_app/immutable/entry/app.FCYPRWcZ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 6],
+							node_ids: [0, 2, 5],
 							data: [null,null,null],
 							form: null,
 							error: null
