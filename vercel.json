@@ -15,14 +15,6 @@
 		{
 			"source": "/my-weight/:path*",
 			"destination": "https://svelte-weight-tracker.vercel.app/:path*"
-		},
-		{
-			"source": "/eva-sticker/:path*",
-			"destination": "/eva-sticker/:path*"
-		},
-		{
-			"source": "/eva-sticker",
-			"destination": "/eva-sticker/index.html"
 		}
 	]
 }
