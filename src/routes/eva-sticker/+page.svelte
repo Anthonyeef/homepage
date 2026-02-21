@@ -430,22 +430,13 @@
     font-weight: 600;
   }
 
-  /* Main Content - Single column by default for homepage compatibility */
+  /* Main Content - Always single column for homepage compatibility */
   .main-content {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-  }
-
-  /* Only show side-by-side on very wide screens */
-  @media (min-width: 1400px) {
-    .main-content {
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      max-width: none;
-    }
   }
 
   /* Panel */
@@ -689,16 +680,17 @@
     font-size: 1em;
   }
 
+  /* Default sizes for single column layout */
   #sticker-preview.square {
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
     padding: 20px;
   }
 
   #sticker-preview.rectangle {
-    width: 533px;
-    height: 400px;
-    padding: 20px 40px;
+    width: 400px;
+    height: 300px;
+    padding: 20px 30px;
   }
 
   #sticker-preview.vertical {
@@ -707,64 +699,38 @@
   }
 
   #sticker-preview.vertical.square {
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
   }
 
   #sticker-preview.vertical.rectangle {
-    width: 400px;
-    height: 533px;
+    width: 300px;
+    height: 400px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     #sticker-preview.square {
-      width: 280px;
-      height: 280px;
+      width: 260px;
+      height: 260px;
       padding: 15px;
     }
     
     #sticker-preview.rectangle {
       width: 280px;
       height: 210px;
-      padding: 15px 25px;
+      padding: 15px 20px;
     }
     
     #sticker-preview.vertical.rectangle {
       width: 210px;
       height: 280px;
-      padding: 25px 15px;
+      padding: 20px 15px;
     }
 
     #sticker-preview.vertical.square {
-      width: 280px;
-      height: 280px;
+      width: 260px;
+      height: 260px;
       padding: 15px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    #sticker-preview.square {
-      width: 240px;
-      height: 240px;
-      padding: 12px;
-    }
-    
-    #sticker-preview.rectangle {
-      width: 240px;
-      height: 180px;
-      padding: 12px 20px;
-    }
-    
-    #sticker-preview.vertical.rectangle {
-      width: 180px;
-      height: 240px;
-      padding: 20px 12px;
-    }
-
-    #sticker-preview.vertical.square {
-      width: 240px;
-      height: 240px;
-      padding: 12px;
     }
   }
 
