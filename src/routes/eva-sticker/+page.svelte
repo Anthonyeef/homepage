@@ -473,7 +473,7 @@
   }
 
   .panel-body {
-    padding: 25px;
+    padding: 18px 20px;
   }
 
   .panel-footer {
@@ -481,18 +481,18 @@
     border-top: 1px solid var(--border-color);
   }
 
-  /* Control Groups */
+  /* Control Groups - Compact layout */
   .control-group {
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
 
   .control-group label {
     display: block;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
     color: var(--text-secondary);
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-weight: 500;
   }
 
@@ -502,15 +502,17 @@
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 12px 15px;
+    padding: 8px 12px;
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     color: var(--text-primary);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans JP', sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
     transition: all 0.3s;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+    height: 38px;
   }
 
   .control-group input:focus,
@@ -518,13 +520,14 @@
   .control-group select:focus {
     outline: none;
     border-color: var(--terminal-cyan);
-    box-shadow: 0 0 0 3px rgba(0, 151, 167, 0.15);
+    box-shadow: 0 0 0 2px rgba(0, 151, 167, 0.12);
     background: #fff;
   }
 
   .control-group textarea {
-    min-height: 80px;
+    min-height: 60px;
     resize: vertical;
+    height: auto;
   }
 
   /* Color Grid - Smaller compact layout */
@@ -584,20 +587,20 @@
     }
   }
 
-  /* Sliders */
+  /* Sliders - Compact */
   .slider-container {
     display: flex;
     align-items: center;
-    gap: 15px;
-    background: rgba(0, 0, 0, 0.04);
-    padding: 10px;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 6px 10px;
     border-radius: 4px;
   }
 
   .slider-container input[type="range"] {
     flex: 1;
     -webkit-appearance: none;
-    height: 4px;
+    height: 3px;
     background: rgba(0, 151, 167, 0.2);
     border-radius: 2px;
     outline: none;
@@ -605,42 +608,43 @@
 
   .slider-container input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     background: var(--terminal-cyan);
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    box-shadow: 0 0 6px rgba(0, 188, 212, 0.4);
   }
 
   .slider-value {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
-    min-width: 50px;
+    min-width: 45px;
     text-align: right;
   }
 
-  /* Checkboxes */
+  /* Checkboxes - Compact */
   .options-group {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 
   .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     cursor: pointer;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
   }
 
   .checkbox-label input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     accent-color: var(--terminal-cyan);
   }
 
