@@ -12,8 +12,6 @@
 </svelte:head>
 
 <div class="projects-container">
-    <h1 class="page-title">Projects</h1>
-    
     <div class="projects-list">
         {#each projects as project}
             <a 
@@ -22,17 +20,13 @@
                 target={isExternal(project.type) ? "_blank" : "_self"}
                 rel={isExternal(project.type) ? "noopener noreferrer" : ""}
             >
+                {#if project.image}
                 <div class="project-image">
-                    {#if project.image}
-                        <img src={project.image} alt={project.title} loading="lazy" />
-                    {:else}
-                        <div class="project-image-placeholder">
-                            <span>◈</span>
-                        </div>
-                    {/if}
+                    <img src={project.image} alt={project.title} loading="lazy" />
                 </div>
+                {/if}
                 
-                <div class="project-content">
+                <div class="project-content" class:full-width={!project.image}>
                     <div class="project-header">
                         <h2 class="project-title">{project.title}</h2>
                         {#if isExternal(project.type)}
@@ -59,38 +53,30 @@
     .projects-container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 2rem 1rem;
-    }
-
-    .page-title {
-        font-size: 1.75rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        color: #1a1a1a;
+        padding: 0.5rem 0 2rem;
     }
 
     .projects-list {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
     }
 
     .project-item {
         display: flex;
         gap: 1.25rem;
-        padding: 1.25rem;
-        background: #fff;
-        border: 1px solid #e8e8e8;
-        border-radius: 8px;
+        padding: 1.25rem 1rem;
         text-decoration: none;
         color: inherit;
+        border-bottom: 1px solid #eee;
         transition: all 0.2s ease;
     }
 
+    .project-item:last-child {
+        border-bottom: none;
+    }
+
     .project-item:hover {
-        border-color: #0097A7;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transform: translateY(-1px);
+        background: rgba(0, 151, 167, 0.02);
     }
 
     .project-image {
@@ -108,20 +94,13 @@
         object-fit: cover;
     }
 
-    .project-image-placeholder {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
-        color: #0097A7;
-        font-size: 1.5rem;
-    }
-
     .project-content {
         flex: 1;
         min-width: 0;
+    }
+
+    .project-content.full-width {
+        width: 100%;
     }
 
     .project-header {
@@ -174,10 +153,6 @@
         .project-image {
             width: 100%;
             height: 160px;
-        }
-
-        .page-title {
-            font-size: 1.5rem;
         }
     }
 </style>
