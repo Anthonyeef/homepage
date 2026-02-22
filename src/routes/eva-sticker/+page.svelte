@@ -10,6 +10,7 @@
   let fontSize = 64;
   let headerFontSize = 32;
   let layoutMode = 'single';
+  let turnPoint = 3;
   let multiLine = false;
   let traditionalChinese = false;
   let currentBg = '#FF6B35';
@@ -72,7 +73,10 @@
 
   $: displayText = toTraditional(stickerText);
   $: displayHeader = toTraditional(headerText);
-  $: showHeader = layoutMode === 'header-main';
+  $: showHeader = layoutMode === 'header-main' || layoutMode === 'header-turn';
+  $: isHeaderTurn = layoutMode === 'header-turn';
+  $: headerVertical = isHeaderTurn ? displayHeader.slice(0, turnPoint) : '';
+  $: headerHorizontal = isHeaderTurn ? displayHeader.slice(turnPoint) : displayHeader;
 
   function updateTime() {
     const now = new Date();
@@ -153,16 +157,31 @@
             <select bind:value={layoutMode}>
               <option value="single">Single Text</option>
               <option value="header-main">Header + Main</option>
+              <option value="header-turn">Header Turn (拐弯)</option>
             </select>
           </div>
 
           <!-- Header Text (conditional) -->
-          {#if showHeader}
+          {#if layoutMode === 'header-main' || layoutMode === 'header-turn'}
             <div class="control-group">
               <label>HEADER TEXT</label>
               <input type="text" bind:value={headerText} placeholder="Enter header text...">
             </div>
+          {/if}
 
+          <!-- Turn Point (for header-turn mode) -->
+          {#if layoutMode === 'header-turn'}
+            <div class="control-group">
+              <label>TURN POINT (竖排字数)</label>
+              <div class="slider-container">
+                <input type="range" min="1" max="10" bind:value={turnPoint}>
+                <span class="slider-value">{turnPoint}</span>
+              </div>
+            </div>
+          {/if}
+
+          <!-- Header Size (for header-main mode) -->
+          {#if layoutMode === 'header-main'}
             <div class="control-group">
               <label>HEADER SIZE</label>
               <div class="slider-container">
@@ -250,10 +269,17 @@
             class="{dimension}"
             class:vertical={orientation === 'vertical'}
             class:single={!showHeader}
-            class:header-main={showHeader}
+            class:header-main={showHeader && !isHeaderTurn}
+            class:header-turn={isHeaderTurn}
             style="background-color: {currentBg}; color: {currentText};"
           >
-            {#if showHeader}
+            {#if isHeaderTurn}
+              <div class="sticker-header-turn">
+                <span class="header-vertical">{headerVertical}</span>
+                <span class="header-horizontal">{headerHorizontal}</span>
+              </div>
+              <div class="header-separator"></div>
+            {:else if showHeader}
               <div class="sticker-header" style="font-size: {headerFontSize}px;">
                 {displayHeader}
               </div>
@@ -687,6 +713,38 @@
     font-size: 0.4em;
     margin-bottom: 0.3em;
     opacity: 0.9;
+  }
+
+  /* Header Turn Layout */
+  .sticker-header-turn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .header-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    margin-right: 8px;
+    font-size: 0.5em;
+  }
+
+  .header-horizontal {
+    writing-mode: horizontal-tb;
+    letter-spacing: 0.05em;
+    font-size: 0.35em;
+    white-space: nowrap;
+  }
+
+  .header-separator {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--nerv-orange), transparent);
+    margin: 10px 0;
   }
 
   .sticker-main {
