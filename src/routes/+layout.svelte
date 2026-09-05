@@ -26,9 +26,6 @@
                 <li class="nav-link-item">
                     <a class="nav-link-text" href="/blog/tags">Tags</a>
                 </li>
-                <li class="nav-link-item">
-                    <a class="nav-link-text" href="/projects">Projects</a>
-                </li>
             </ul>
         </nav>
     </header>
